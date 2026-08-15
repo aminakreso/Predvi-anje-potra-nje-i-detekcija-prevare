@@ -1,0 +1,40 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Virtual environment (637 MB, rebuild with: pip install -r requirements.txt) ---
+.venv/
+venv/
+env/
+
+# --- Datasets -------------------------------------------------------------
+# ~160 MB and redistributed under Kaggle's terms -- download them instead:
+#   hotel_bookings.csv -> kaggle.com/datasets/jessemostipak/hotel-booking-demand
+#   creditcard.csv     -> kaggle.com/datasets/mlg-ulb/creditcardfraud
+# (git cannot re-include a file whose parent directory is excluded, so the
+#  directories are unexcluded step by step down to the .gitkeep placeholder)
+data/*
+!data/raw/
+data/raw/*
+!data/raw/.gitkeep
+
+# --- Trained models (regenerate with train.py / card_fraud.py) ---
+models/
+*.joblib
+
+# --- Large generated outputs ----------------------------------------------
+# Scored predictions are ~5.5 MB and reproducible from the saved model.
+# The small result tables in reports/*.csv ARE tracked -- they are cited in
+# the README -- as are the figures in reports/figures/.
+reports/predictions.csv
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.claude/
+Thumbs.db
+desktop.ini
+.DS_Store

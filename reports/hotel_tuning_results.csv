@@ -1,0 +1,5 @@
+,mean,std
+baseline_majority,0.5,0.0
+baseline_stratified,0.49864601505680284,0.0022181232476112312
+baseline_prior,0.5,0.0
+xgboost_tuned,0.9516966026037071,0.001670088227153304
