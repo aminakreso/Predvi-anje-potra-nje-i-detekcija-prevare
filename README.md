@@ -127,8 +127,8 @@ bosanskom, s decimalnim zarezom, u rezoluciji 300 dpi (spremno za rad).
 
 | Broj | Sadržaj | Skripta |
 |---|---|---|
-| 01–06, 21–26, 31–32 | EDA hotelskog skupa (stopa otkazivanja po segmentima, nedostajuće vrijednosti, korelacije, obilježja s dolaska) | `eda.py` |
-| 27–28 | EDA kartica (iznos po klasi, udio prevara po satu) | `eda.py` |
+| eda01–eda14 | EDA hotelskog skupa (nedostajuće vrijednosti, stopa otkazivanja po segmentima i vremenu najave, korelacije, obilježja s dolaska) | `eda.py` |
+| eda15–eda16 | EDA kartica (iznos po klasi, udio prevara po satu) | `eda.py` |
 | 07–09 | ROC krive, važnost obilježja, matrica konfuzije — otkazivanje | `train.py` |
 | 12, 13, 29 | PR krive, kompromis praga, matrica konfuzije — kartice | `card_fraud.py` |
 | 18–20 | SHAP (hotel, kartice), kriva troška | `explain.py` |
