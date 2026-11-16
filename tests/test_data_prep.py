@@ -7,12 +7,15 @@ import pytest
 
 from data_prep import (
     LEAKAGE_COLS,
+    MAX_VALID_ADR,
+    POST_BOOKING_FEATURES,
     TARGET,
     clean_data,
     engineer_features,
     get_feature_lists,
     load_and_prepare,
     load_data,
+    load_modeling_data,
 )
 
 
@@ -34,6 +37,44 @@ class TestLeakageGuards:
         correlations = real_hotel_df[numeric_cols].corrwith(real_hotel_df[TARGET]).abs()
         suspicious = correlations[correlations > 0.95]
         assert suspicious.empty, f"Suspiciously predictive features: {dict(suspicious)}"
+
+    def test_post_booking_features_excluded_by_default(self, prepared_hotel_df):
+        numeric_cols, categorical_cols = get_feature_lists(prepared_hotel_df)
+        for column in POST_BOOKING_FEATURES:
+            assert column not in numeric_cols + categorical_cols
+
+    def test_post_booking_features_available_on_request(self, prepared_hotel_df):
+        """sensitivity.py needs them to measure how much they inflate results."""
+        numeric_cols, categorical_cols = get_feature_lists(
+            prepared_hotel_df, include_post_booking=True
+        )
+        for column in POST_BOOKING_FEATURES:
+            assert column in numeric_cols + categorical_cols
+
+    @staticmethod
+    def _groups_with_certain_outcome(df, columns):
+        found = {}
+        for column in columns:
+            stats = df.groupby(column)[TARGET].agg(["mean", "size"])
+            large = stats[stats["size"] >= 0.01 * len(df)]
+            certain = large[large["mean"].isin([0.0, 1.0])]
+            if not certain.empty:
+                found[column] = certain.to_dict("index")
+        return found
+
+    def test_no_large_group_has_a_certain_outcome(self, real_hotel_df):
+        """Leakage tripwire: a value shared by >=1% of bookings that is NEVER
+        (or ALWAYS) canceled suggests the field is filled in once the outcome
+        is known. This is how the parking-space leak was found."""
+        numeric_cols, categorical_cols = get_feature_lists(real_hotel_df)
+        found = self._groups_with_certain_outcome(real_hotel_df, numeric_cols + categorical_cols)
+        assert not found, f"Features with a certain outcome: {found}"
+
+    def test_tripwire_catches_the_parking_leak(self, real_hotel_df):
+        found = self._groups_with_certain_outcome(
+            real_hotel_df, ["required_car_parking_spaces"]
+        )
+        assert "required_car_parking_spaces" in found
 
 
 class TestFeatureLists:
@@ -85,6 +126,44 @@ class TestCleaning:
     def test_children_nan_filled(self, raw_hotel_df):
         assert raw_hotel_df["children"].isna().any(), "fixture should contain NaN"
         assert not clean_data(raw_hotel_df)["children"].isna().any()
+
+    def test_impossible_rates_removed(self, raw_hotel_df):
+        raw_hotel_df.loc[5, "adr"] = -6.38
+        raw_hotel_df.loc[6, "adr"] = 5400.0
+        cleaned = clean_data(raw_hotel_df)
+        assert cleaned["adr"].between(0, MAX_VALID_ADR).all()
+        assert len(cleaned) == len(clean_data(raw_hotel_df.drop(index=[5, 6])))
+
+    def test_preparation_is_row_by_row(self, raw_hotel_df):
+        """Preparation runs before the train/test split, so a row's result must
+        not depend on the other rows -- otherwise statistics of the test rows
+        leak into training (as an earlier quantile clip of adr did)."""
+        raw = raw_hotel_df.assign(row_id=range(len(raw_hotel_df)))
+        full = engineer_features(clean_data(raw)).set_index("row_id")
+        part = engineer_features(clean_data(raw.iloc[:30])).set_index("row_id")
+        pd.testing.assert_frame_equal(part, full.loc[part.index])
+
+
+class TestDeduplication:
+    @pytest.fixture
+    def path_with_duplicates(self, raw_hotel_df, tmp_path):
+        doubled = pd.concat([raw_hotel_df, raw_hotel_df.iloc[10:20]], ignore_index=True)
+        path = tmp_path / "with_duplicates.csv"
+        doubled.to_csv(path, index=False)
+        return path
+
+    def test_duplicates_removed_before_modeling(self, path_with_duplicates):
+        X, y, _, _ = load_modeling_data(path_with_duplicates)
+        assert not X.assign(**{TARGET: y.to_numpy()}).duplicated().any()
+
+    def test_deduplication_can_be_disabled(self, path_with_duplicates):
+        X, _, _, _ = load_modeling_data(path_with_duplicates, deduplicate=False)
+        assert len(X) == len(load_and_prepare(path_with_duplicates))
+
+    def test_modeling_data_has_the_feature_columns_only(self, path_with_duplicates):
+        X, y, numeric_cols, categorical_cols = load_modeling_data(path_with_duplicates)
+        assert list(X.columns) == numeric_cols + categorical_cols
+        assert y.name == TARGET
 
 
 class TestEngineeredFeatures:

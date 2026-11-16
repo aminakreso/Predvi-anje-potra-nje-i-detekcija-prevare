@@ -1,0 +1,19 @@
+model,parameter,search_space,best_value,best_cv_score_mean,best_cv_score_std,metric
+Logistička regresija,C,"log-uniformno iz [0,001; 100]","0,1907",0.7548022220260204,0.022591465402666752,average_precision
+Logistička regresija,penalty,{l1; l2},l2,0.7548022220260204,0.022591465402666752,average_precision
+Logistička regresija,class_weight,{None; balanced},None,0.7548022220260204,0.022591465402666752,average_precision
+SVM,C,"log-uniformno iz [0,1; 30]","27,26",0.8138676089312877,0.02895681274265458,average_precision
+SVM,gamma,"log-uniformno iz [0,001; 0,3]","0,001303",0.8138676089312877,0.02895681274265458,average_precision
+SVM,class_weight,{None; balanced},None,0.8138676089312877,0.02895681274265458,average_precision
+Random Forest,n_estimators,"cijeli broj iz [100, 299]",157,0.8310733975872061,0.03848482125647528,average_precision
+Random Forest,max_depth,{8; 12; 16; 20},20,0.8310733975872061,0.03848482125647528,average_precision
+Random Forest,min_samples_leaf,"cijeli broj iz [1, 9]",1,0.8310733975872061,0.03848482125647528,average_precision
+Random Forest,max_features,"{sqrt; log2; 0,3}",sqrt,0.8310733975872061,0.03848482125647528,average_precision
+Random Forest,class_weight,{None; balanced},balanced,0.8310733975872061,0.03848482125647528,average_precision
+XGBoost,n_estimators,"cijeli broj iz [200, 699]",391,0.8505533722755882,0.03223470206828699,average_precision
+XGBoost,max_depth,"cijeli broj iz [3, 9]",8,0.8505533722755882,0.03223470206828699,average_precision
+XGBoost,learning_rate,"log-uniformno iz [0,01; 0,3]","0,1697",0.8505533722755882,0.03223470206828699,average_precision
+XGBoost,subsample,"uniformno iz [0,6; 1]","0,847",0.8505533722755882,0.03223470206828699,average_precision
+XGBoost,colsample_bytree,"uniformno iz [0,6; 1]","0,988",0.8505533722755882,0.03223470206828699,average_precision
+XGBoost,min_child_weight,"cijeli broj iz [1, 9]",2,0.8505533722755882,0.03223470206828699,average_precision
+XGBoost,scale_pos_weight,"{1; 24,36; 593,5}",1,0.8505533722755882,0.03223470206828699,average_precision

@@ -33,18 +33,20 @@ def score(input_path: Path, model_path: Path) -> pd.DataFrame:
     df = load_and_prepare(input_path, require_target=False)
     dropped = raw_row_count - len(df)
     if dropped > 0:
-        print(f"Skipped {dropped} row(s) with invalid guest/night counts (0 guests or 0 nights).")
+        print(f"Skipped {dropped} invalid row(s) (0 guests, 0 nights, or an impossible nightly rate).")
 
+    # The saved pipeline carries its own preprocessing, including the list of
+    # countries frequent enough in the TRAINING data to keep their own column.
     model = joblib.load(model_path)
     numeric_cols, categorical_cols = get_feature_lists(df)
     X = df[numeric_cols + categorical_cols]
 
-    probabilities = model.predict_proba(X)[:, 1]
-    predictions = model.predict(X)
-
     output = df[[c for c in ID_COLS if c in df.columns]].copy()
-    output["cancellation_probability"] = probabilities.round(4)
-    output["predicted_cancellation"] = predictions
+    if hasattr(model, "predict_proba"):
+        output["cancellation_probability"] = model.predict_proba(X)[:, 1].round(4)
+    else:  # an SVM gives a decision value, not a probability
+        output["cancellation_score"] = model.decision_function(X).round(4)
+    output["predicted_cancellation"] = model.predict(X)
 
     return output
 

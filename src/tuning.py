@@ -1,235 +1,138 @@
-"""Hyperparameter search, repeated cross-validation, and trivial baselines.
+"""Hyperparameter search for all four models on both tasks.
 
-Three things a thesis-level evaluation needs that a single train/test split
-does not give you:
+RandomizedSearchCV over the spaces in modeling.search_space(), run on the
+TRAINING split only (the test split is never seen during tuning). Writes:
 
-1. BASELINES -- a number is meaningless without something to beat. For the
-   card-fraud data especially, a "predict the majority class" baseline scores
-   99.83% accuracy, which is exactly why accuracy is the wrong metric.
-2. TUNED HYPERPARAMETERS -- reported over a documented search space, so the
-   result is reproducible rather than the product of hand-picked settings.
-3. CONFIDENCE INTERVALS -- repeated stratified CV gives mean +/- std, so you
-   can say whether model A really beats model B or the gap is noise.
+  reports/{task}_best_params.json  -- read by train.py / card_fraud.py
+  reports/{task}_search_space.csv  -- search space, chosen values and CV score
+                                      of the best combination (thesis Table 4)
+
+Run this before train.py and card_fraud.py. Re-running with --models only
+updates those models' entries, so one model can be re-tuned on its own.
 
 Usage:
-    python src/tuning.py --task hotel
-    python src/tuning.py --task card
-    python src/tuning.py --task both --n-iter 25
+    python src/tuning.py --task both
+    python src/tuning.py --task hotel --models svm xgboost --n-iter 25
 """
 
 import argparse
+import time
 import warnings
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
-from sklearn.compose import ColumnTransformer
-from sklearn.dummy import DummyClassifier
-from sklearn.model_selection import (
-    RandomizedSearchCV,
-    RepeatedStratifiedKFold,
-    StratifiedKFold,
-    cross_val_score,
-    train_test_split,
-)
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from scipy.stats import loguniform, randint, uniform
+from sklearn.model_selection import RandomizedSearchCV, StratifiedKFold
 
-from data_prep import TARGET, get_feature_lists, load_and_prepare
+from modeling import (
+    MODEL_LABELS,
+    MODEL_NAMES,
+    RANDOM_STATE,
+    build_pipeline,
+    describe_distribution,
+    format_value,
+    load_params,
+    save_params,
+    search_space,
+    split_data,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 HOTEL_DATA = ROOT / "data" / "raw" / "hotel_bookings.csv"
 CARD_DATA = ROOT / "data" / "raw" / "creditcard.csv"
 REPORT_DIR = ROOT / "reports"
-RANDOM_STATE = 42
+SCORING = {"hotel": "roc_auc", "card": "average_precision"}
 
 warnings.filterwarnings("ignore")
 
-# Search space is defined once, here, so the thesis can quote it verbatim.
-XGB_SEARCH_SPACE = {
-    "model__n_estimators": randint(200, 700),
-    "model__max_depth": randint(3, 10),
-    "model__learning_rate": loguniform(0.01, 0.3),
-    "model__subsample": uniform(0.6, 0.4),
-    "model__colsample_bytree": uniform(0.6, 0.4),
-    "model__min_child_weight": randint(1, 10),
-}
+
+def load_training_split(task: str):
+    if task == "hotel":
+        from data_prep import load_modeling_data
+
+        X, y, numeric_cols, categorical_cols = load_modeling_data(HOTEL_DATA)
+    else:
+        from card_fraud import load_modeling_data
+
+        X, y = load_modeling_data(CARD_DATA)
+        numeric_cols, categorical_cols = list(X.columns), []
+    X_train, _, y_train, _ = split_data(X, y)
+    return X_train, y_train, numeric_cols, categorical_cols
 
 
-def evaluate_baselines(X, y, preprocessor, scoring: str, cv) -> pd.DataFrame:
-    """Trivial reference points that any real model must beat."""
-    rows = {}
-    for name, strategy in [
-        ("baseline_majority", "most_frequent"),
-        ("baseline_stratified", "stratified"),
-        ("baseline_prior", "prior"),
-    ]:
-        pipeline = Pipeline([
-            ("preprocessor", preprocessor),
-            ("model", DummyClassifier(strategy=strategy, random_state=RANDOM_STATE)),
-        ])
-        scores = cross_val_score(pipeline, X, y, cv=cv, scoring=scoring, n_jobs=-1)
-        rows[name] = {"mean": scores.mean(), "std": scores.std()}
-    return pd.DataFrame(rows).T
-
-
-def run_search(pipeline, space, X, y, scoring, n_iter, cv_folds):
-    search = RandomizedSearchCV(
-        pipeline,
-        param_distributions=space,
-        n_iter=n_iter,
-        scoring=scoring,
-        cv=StratifiedKFold(n_splits=cv_folds, shuffle=True, random_state=RANDOM_STATE),
-        random_state=RANDOM_STATE,
-        n_jobs=-1,
-        verbose=1,
-        refit=True,
-    )
-    search.fit(X, y)
-    return search
-
-
-def repeated_cv(pipeline, X, y, scoring: str, n_repeats: int) -> tuple[float, float]:
-    """Mean +/- std over repeated stratified CV -- the confidence interval."""
-    cv = RepeatedStratifiedKFold(
-        n_splits=5, n_repeats=n_repeats, random_state=RANDOM_STATE
-    )
-    scores = cross_val_score(pipeline, X, y, cv=cv, scoring=scoring, n_jobs=-1)
-    return float(scores.mean()), float(scores.std())
-
-
-def tune_hotel(n_iter: int, cv_folds: int, n_repeats: int) -> pd.DataFrame:
-    from xgboost import XGBClassifier
-
+def tune_task(task: str, models: list[str], n_iter: int, cv_folds: int) -> None:
     print("\n" + "=" * 70)
-    print("HOTEL CANCELLATION -- tuning (scoring: roc_auc)")
+    print(f"{task.upper()} -- tuning (scoring: {SCORING[task]})")
     print("=" * 70)
 
-    df = load_and_prepare(HOTEL_DATA)
-    numeric_cols, categorical_cols = get_feature_lists(df)
-    X, y = df[numeric_cols + categorical_cols], df[TARGET]
-    X_train, _, y_train, _ = train_test_split(
-        X, y, test_size=0.2, stratify=y, random_state=RANDOM_STATE
-    )
+    X_train, y_train, numeric_cols, categorical_cols = load_training_split(task)
+    params_path = REPORT_DIR / f"{task}_best_params.json"
+    table_path = REPORT_DIR / f"{task}_search_space.csv"
+    best_params = load_params(params_path)
+    table = pd.read_csv(table_path) if table_path.exists() else pd.DataFrame()
 
-    preprocessor = ColumnTransformer([
-        ("num", StandardScaler(), numeric_cols),
-        ("cat", OneHotEncoder(handle_unknown="ignore"), categorical_cols),
-    ])
-
-    cv = StratifiedKFold(n_splits=cv_folds, shuffle=True, random_state=RANDOM_STATE)
-    baselines = evaluate_baselines(X_train, y_train, preprocessor, "roc_auc", cv)
-    print("\nBaselines (ROC-AUC):")
-    print(baselines.round(4).to_string())
-
-    pipeline = Pipeline([
-        ("preprocessor", preprocessor),
-        ("model", XGBClassifier(
-            eval_metric="logloss", random_state=RANDOM_STATE, n_jobs=-1
-        )),
-    ])
-
-    print(f"\nRandomizedSearchCV: {n_iter} candidates x {cv_folds} folds ...")
-    search = run_search(pipeline, XGB_SEARCH_SPACE, X_train, y_train,
-                        "roc_auc", n_iter, cv_folds)
-
-    print(f"\nBest CV ROC-AUC: {search.best_score_:.4f}")
-    print("Best params:")
-    for key, value in sorted(search.best_params_.items()):
-        print(f"  {key.replace('model__', '')}: {value}")
-
-    mean, std = repeated_cv(search.best_estimator_, X_train, y_train, "roc_auc", n_repeats)
-    print(f"\nRepeated CV (5-fold x {n_repeats}): ROC-AUC {mean:.4f} +/- {std:.4f}")
-
-    rows = baselines.copy()
-    rows.loc["xgboost_tuned"] = {"mean": mean, "std": std}
-    rows.to_csv(REPORT_DIR / "hotel_tuning_results.csv")
-
-    pd.Series(search.best_params_).to_csv(REPORT_DIR / "hotel_best_params.csv")
-    return rows
-
-
-def tune_card(n_iter: int, cv_folds: int, n_repeats: int) -> pd.DataFrame:
-    from xgboost import XGBClassifier
-
-    print("\n" + "=" * 70)
-    print("CARD FRAUD -- tuning (scoring: average_precision / PR-AUC)")
-    print("=" * 70)
-
-    if not CARD_DATA.exists():
-        print(f"Skipping -- {CARD_DATA} not found.")
-        return pd.DataFrame()
-
-    from card_fraud import engineer_features, load_data
-
-    df = engineer_features(load_data(CARD_DATA))
-    X, y = df.drop(columns=["Class"]), df["Class"]
-    X_train, _, y_train, _ = train_test_split(
-        X, y, test_size=0.2, stratify=y, random_state=RANDOM_STATE
-    )
-
-    # No categorical columns here -- V1-V28 are already numeric PCA components.
-    preprocessor = ColumnTransformer([("num", StandardScaler(), list(X.columns))])
-    scale_pos_weight = (y_train == 0).sum() / (y_train == 1).sum()
-
-    cv = StratifiedKFold(n_splits=cv_folds, shuffle=True, random_state=RANDOM_STATE)
-    baselines = evaluate_baselines(X_train, y_train, preprocessor, "average_precision", cv)
-    print("\nBaselines (PR-AUC):")
-    print(baselines.round(5).to_string())
-    print(f"  (chance level = fraud prevalence = {y_train.mean():.5f})")
-
-    pipeline = Pipeline([
-        ("preprocessor", preprocessor),
-        ("model", XGBClassifier(
-            eval_metric="aucpr",
-            scale_pos_weight=scale_pos_weight,
+    for name in models:
+        # The search runs candidates in parallel, so each model uses one core.
+        pipeline = build_pipeline(name, task, numeric_cols, categorical_cols, y_train, n_jobs=1)
+        space = search_space(name, task, y_train)
+        search = RandomizedSearchCV(
+            pipeline,
+            param_distributions=space,
+            n_iter=n_iter,
+            scoring=SCORING[task],
+            cv=StratifiedKFold(n_splits=cv_folds, shuffle=True, random_state=RANDOM_STATE),
             random_state=RANDOM_STATE,
             n_jobs=-1,
-        )),
-    ])
+            refit=False,  # train.py / card_fraud.py refit with the chosen values
+        )
+        start = time.time()
+        search.fit(X_train, y_train)
+        best = search.best_index_
+        mean = search.cv_results_["mean_test_score"][best]
+        std = search.cv_results_["std_test_score"][best]
+        print(f"\n[{name}] best CV {SCORING[task]}: {mean:.4f} +/- {std:.4f} "
+              f"({n_iter} candidates x {cv_folds} folds, {time.time() - start:.0f}s)")
 
-    print(f"\nRandomizedSearchCV: {n_iter} candidates x {cv_folds} folds ...")
-    search = run_search(pipeline, XGB_SEARCH_SPACE, X_train, y_train,
-                        "average_precision", n_iter, cv_folds)
+        chosen = {key.removeprefix("model__"): value
+                  for key, value in search.best_params_.items()}
+        for key, value in chosen.items():
+            print(f"  {key}: {value}")
+        best_params[name] = chosen
 
-    print(f"\nBest CV PR-AUC: {search.best_score_:.4f}")
-    print("Best params:")
-    for key, value in sorted(search.best_params_.items()):
-        print(f"  {key.replace('model__', '')}: {value}")
+        rows = [{
+            "model": MODEL_LABELS[name],
+            "parameter": key.removeprefix("model__").removeprefix("estimator__"),
+            "search_space": describe_distribution(dist),
+            "best_value": format_value(search.best_params_[key]),
+            "best_cv_score_mean": mean,
+            "best_cv_score_std": std,
+            "metric": SCORING[task],
+        } for key, dist in space.items()]
+        if not table.empty:
+            table = table[table["model"] != MODEL_LABELS[name]]
+        table = pd.concat([table, pd.DataFrame(rows)], ignore_index=True)
 
-    mean, std = repeated_cv(search.best_estimator_, X_train, y_train,
-                            "average_precision", n_repeats)
-    print(f"\nRepeated CV (5-fold x {n_repeats}): PR-AUC {mean:.4f} +/- {std:.4f}")
-    print("  This +/- matters: with only ~394 training frauds, fold-to-fold "
-          "variance is large and single-split numbers can mislead.")
+        # Saved after every model, so a long run that is interrupted keeps
+        # everything finished so far.
+        save_params(params_path, best_params)
+        order = {MODEL_LABELS[m]: i for i, m in enumerate(MODEL_NAMES)}
+        table.sort_values("model", key=lambda s: s.map(order), kind="stable").to_csv(
+            table_path, index=False)
 
-    rows = baselines.copy()
-    rows.loc["xgboost_tuned"] = {"mean": mean, "std": std}
-    rows.to_csv(REPORT_DIR / "card_tuning_results.csv")
-
-    pd.Series(search.best_params_).to_csv(REPORT_DIR / "card_best_params.csv")
-    return rows
+    print(f"\nSaved {params_path.name} and {table_path.name} to {REPORT_DIR}")
 
 
-def main(task: str, n_iter: int, cv_folds: int, n_repeats: int) -> None:
+def main(task: str, models: list[str], n_iter: int, cv_folds: int) -> None:
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
-
-    if task in ("hotel", "both"):
-        tune_hotel(n_iter, cv_folds, n_repeats)
-    if task in ("card", "both"):
-        tune_card(n_iter, cv_folds, n_repeats)
-
-    print(f"\nSaved tuning results + best params to {REPORT_DIR}")
+    for t in (["hotel", "card"] if task == "both" else [task]):
+        tune_task(t, models, n_iter, cv_folds)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--task", choices=["hotel", "card", "both"], default="both")
+    parser.add_argument("--models", nargs="+", choices=MODEL_NAMES, default=MODEL_NAMES)
     parser.add_argument("--n-iter", type=int, default=15,
-                        help="RandomizedSearchCV candidates (higher = slower, better)")
+                        help="RandomizedSearchCV candidates per model (higher = slower, better)")
     parser.add_argument("--cv-folds", type=int, default=3)
-    parser.add_argument("--n-repeats", type=int, default=2,
-                        help="Repeats for the confidence-interval CV")
     args = parser.parse_args()
-    main(args.task, args.n_iter, args.cv_folds, args.n_repeats)
+    main(args.task, args.models, args.n_iter, args.cv_folds)

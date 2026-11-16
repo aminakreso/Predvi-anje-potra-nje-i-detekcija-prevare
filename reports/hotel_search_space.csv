@@ -1,0 +1,19 @@
+model,parameter,search_space,best_value,best_cv_score_mean,best_cv_score_std,metric
+Logistička regresija,C,"log-uniformno iz [0,001; 100]","1,146",0.8098937100570188,0.0014657580473821847,roc_auc
+Logistička regresija,penalty,{l1; l2},l2,0.8098937100570188,0.0014657580473821847,roc_auc
+Logistička regresija,class_weight,{None; balanced},balanced,0.8098937100570188,0.0014657580473821847,roc_auc
+SVM,C,"log-uniformno iz [0,1; 30]","25,83",0.8473724769100212,0.002967509996694209,roc_auc
+SVM,gamma,"log-uniformno iz [0,001; 0,3]","0,01348",0.8473724769100212,0.002967509996694209,roc_auc
+SVM,class_weight,{None; balanced},None,0.8473724769100212,0.002967509996694209,roc_auc
+Random Forest,n_estimators,"cijeli broj iz [100, 399]",363,0.8822743685290367,0.0005274864496350841,roc_auc
+Random Forest,max_depth,{10; 15; 20; 25; None},25,0.8822743685290367,0.0005274864496350841,roc_auc
+Random Forest,min_samples_leaf,"cijeli broj iz [1, 9]",7,0.8822743685290367,0.0005274864496350841,roc_auc
+Random Forest,max_features,"{sqrt; log2; 0,3}","0,3",0.8822743685290367,0.0005274864496350841,roc_auc
+Random Forest,class_weight,{None; balanced},balanced,0.8822743685290367,0.0005274864496350841,roc_auc
+XGBoost,n_estimators,"cijeli broj iz [200, 699]",563,0.886741991818197,0.00032747328987218317,roc_auc
+XGBoost,max_depth,"cijeli broj iz [3, 9]",9,0.886741991818197,0.00032747328987218317,roc_auc
+XGBoost,learning_rate,"log-uniformno iz [0,01; 0,3]","0,02701",0.886741991818197,0.00032747328987218317,roc_auc
+XGBoost,subsample,"uniformno iz [0,6; 1]","0,9933",0.886741991818197,0.00032747328987218317,roc_auc
+XGBoost,colsample_bytree,"uniformno iz [0,6; 1]","0,6558",0.886741991818197,0.00032747328987218317,roc_auc
+XGBoost,min_child_weight,"cijeli broj iz [1, 9]",3,0.886741991818197,0.00032747328987218317,roc_auc
+XGBoost,scale_pos_weight,"{1; 2,597}",1,0.886741991818197,0.00032747328987218317,roc_auc

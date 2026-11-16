@@ -14,20 +14,26 @@ Usage:
 import argparse
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 from sklearn.ensemble import IsolationForest
-from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 from data_prep import get_feature_lists, load_and_prepare
-from plotting import FIG_DIR, add_show_argument, emit, plt, report_saved
+from modeling import RANDOM_STATE, build_preprocessor
+from plotting import add_show_argument, emit, plt, report_saved
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATA_PATH = ROOT / "data" / "raw" / "hotel_bookings.csv"
 OUTPUT_PATH = ROOT / "reports" / "fraud_review_queue.csv"
-RANDOM_STATE = 42
+
+RULE_LABELS = {
+    "flag_last_minute_high_value": "Skupa rezervacija u posljednji čas, bez depozita",
+    "flag_serial_canceller": "Serijski otkazivač",
+    "flag_excessive_changes": "Prekomjerne izmjene rezervacije (≥ 5)",
+    "flag_group_rate_mismatch": "Velika grupa uz neobično nisku cijenu",
+    "flag_suspicious_zero_rate": "Sumnjiva nulta cijena",
+    "flag_long_unsecured_stay": "Dug boravak bez depozita i agenta",
+}
 
 # Share of bookings Isolation Forest treats as anomalous. Not an estimate of
 # the real fraud rate (unknown) -- it's a review-capacity dial.
@@ -87,14 +93,8 @@ def add_anomaly_scores(df: pd.DataFrame) -> pd.DataFrame:
     # Exclude engineered rule columns so the model doesn't just relearn the rules.
     numeric_cols = [c for c in numeric_cols if not c.startswith(("flag_", "rule_"))]
 
-    preprocessor = ColumnTransformer(
-        transformers=[
-            ("num", StandardScaler(), numeric_cols),
-            ("cat", OneHotEncoder(handle_unknown="ignore"), categorical_cols),
-        ]
-    )
     model = Pipeline([
-        ("preprocessor", preprocessor),
+        ("preprocessor", build_preprocessor(numeric_cols, categorical_cols)),
         ("iforest", IsolationForest(
             n_estimators=200,
             contamination=CONTAMINATION,
@@ -138,20 +138,20 @@ def combine_scores(df: pd.DataFrame) -> pd.DataFrame:
 def plot_risk_distribution(df: pd.DataFrame) -> None:
     fig, ax = plt.subplots(figsize=(8, 4))
     ax.hist(df["risk_score"], bins=50, color="#C44E52")
-    ax.set_xlabel("Risk score")
-    ax.set_ylabel("Bookings")
+    ax.set_xlabel("Ocjena rizika (0–100)")
+    ax.set_ylabel("Broj rezervacija (logaritamska skala)")
     ax.set_yscale("log")
-    ax.set_title("Distribution of fraud-triage risk scores (log scale)")
+    ax.set_title("Raspodjela ocjene rizika sumnjivih rezervacija")
     emit(fig, "10_fraud_risk_distribution.png")
 
 
 def plot_rule_hit_counts(df: pd.DataFrame) -> None:
     flag_cols = [c for c in df.columns if c.startswith("flag_")]
-    counts = df[flag_cols].sum().sort_values()
+    counts = df[flag_cols].sum().sort_values().rename(index=RULE_LABELS)
     fig, ax = plt.subplots(figsize=(8, 4))
     counts.plot(kind="barh", ax=ax, color="#4C72B0")
-    ax.set_xlabel("Bookings flagged")
-    ax.set_title("How often each fraud rule fires")
+    ax.set_xlabel("Broj označenih rezervacija")
+    ax.set_title("Koliko često se aktivira svako pravilo")
     emit(fig, "11_fraud_rule_hits.png")
 
 

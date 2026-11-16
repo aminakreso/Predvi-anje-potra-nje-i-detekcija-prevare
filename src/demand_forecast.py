@@ -166,12 +166,23 @@ def forecast_ml(series: pd.Series, test_index: pd.DatetimeIndex) -> np.ndarray:
     return model.predict(test_frame[feature_cols])
 
 
+FORECAST_LABELS = {
+    "naive": "Naivni (t−1)",
+    "seasonal_naive": "Sezonski naivni (t−7)",
+    "sarima": "SARIMA(1,1,1)(1,1,1)₇",
+    "gradient_boosting": "Gradient boosting (obilježja s pomakom)",
+}
+MONTHS_BS = ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Avg", "Sep", "Okt", "Nov", "Dec"]
+DAYS_BS = ["Pon", "Uto", "Sri", "Čet", "Pet", "Sub", "Ned"]
+
+
 def plot_series(daily: pd.DataFrame, label: str) -> None:
     fig, ax = plt.subplots(figsize=(12, 5))
-    ax.plot(daily.index, daily["gross_bookings"], label="Gross bookings", alpha=0.6)
-    ax.plot(daily.index, daily["net_bookings"], label="Net (after cancellations)")
-    ax.set_ylabel("Bookings per day")
-    ax.set_title(f"Daily hotel demand -- {label}")
+    ax.plot(daily.index, daily["gross_bookings"], label="Ukupne (bruto) rezervacije", alpha=0.6)
+    ax.plot(daily.index, daily["net_bookings"], label="Realizovane (neto, bez otkazanih)")
+    ax.set_xlabel("Datum dolaska")
+    ax.set_ylabel("Broj rezervacija po danu")
+    ax.set_title(f"Dnevna potražnja – {label}")
     ax.legend()
     emit(fig, "14_demand_daily_series.png")
 
@@ -180,26 +191,28 @@ def plot_decomposition(series: pd.Series) -> None:
     result = seasonal_decompose(series, model="additive", period=SEASONAL_PERIOD)
     fig, axes = plt.subplots(4, 1, figsize=(12, 9), sharex=True)
     for ax, (data, name) in zip(axes, [
-        (result.observed, "Observed"),
+        (result.observed, "Opažena serija"),
         (result.trend, "Trend"),
-        (result.seasonal, "Seasonal (weekly)"),
-        (result.resid, "Residual"),
+        (result.seasonal, "Sedmična sezonalnost"),
+        (result.resid, "Rezidual"),
     ]):
         ax.plot(data.index, data)
         ax.set_ylabel(name, fontsize=9)
-    axes[0].set_title("Seasonal decomposition of net daily demand")
+    axes[-1].set_xlabel("Datum dolaska")
+    axes[0].set_title("Aditivna dekompozicija dnevne realizovane potražnje")
     emit(fig, "15_demand_decomposition.png")
 
 
 def plot_forecasts(train: pd.Series, test: pd.Series, forecasts: dict) -> None:
     fig, ax = plt.subplots(figsize=(12, 5))
     context = train.iloc[-60:]
-    ax.plot(context.index, context, color="gray", label="History", alpha=0.6)
-    ax.plot(test.index, test, color="black", linewidth=2, label="Actual")
+    ax.plot(context.index, context, color="gray", label="Historija (trening)", alpha=0.6)
+    ax.plot(test.index, test, color="black", linewidth=2, label="Stvarne vrijednosti")
     for name, values in forecasts.items():
-        ax.plot(test.index, values, alpha=0.8, label=name)
-    ax.set_ylabel("Net bookings per day")
-    ax.set_title("One-step-ahead forecasts vs. actual (test window)")
+        ax.plot(test.index, values, alpha=0.8, label=FORECAST_LABELS.get(name, name))
+    ax.set_xlabel("Datum dolaska")
+    ax.set_ylabel("Realizovane rezervacije po danu")
+    ax.set_title("Prognoze jedan dan unaprijed i stvarne vrijednosti (testni period)")
     ax.legend(fontsize=8)
     emit(fig, "16_demand_forecast_vs_actual.png")
 
@@ -210,19 +223,21 @@ def plot_monthly_seasonality(daily: pd.DataFrame) -> None:
 
     fig, axes = plt.subplots(1, 2, figsize=(12, 4))
     by_month.plot(kind="bar", ax=axes[0], color="#4C72B0")
-    axes[0].set_title("Average net demand by month")
-    axes[0].set_xlabel("Month")
+    axes[0].set_xticklabels([MONTHS_BS[m - 1] for m in by_month.index], rotation=0)
+    axes[0].set_title("Prosječna dnevna realizovana potražnja po mjesecu")
+    axes[0].set_xlabel("Mjesec")
+    axes[0].set_ylabel("Realizovane rezervacije po danu")
     by_dow.plot(kind="bar", ax=axes[1], color="#55A868")
-    axes[1].set_xticklabels(["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], rotation=0)
-    axes[1].set_title("Average net demand by day of week")
-    axes[1].set_xlabel("")
+    axes[1].set_xticklabels([DAYS_BS[d] for d in by_dow.index], rotation=0)
+    axes[1].set_title("Prosječna dnevna realizovana potražnja po danu u sedmici")
+    axes[1].set_xlabel("Dan u sedmici")
     emit(fig, "17_demand_seasonality.png")
 
 
 def main(data_path: Path, hotel: str | None, test_days: int) -> None:
     print(f"Loading data from {data_path} ...")
     df = load_and_prepare(data_path)
-    label = hotel or "both hotels"
+    label = hotel or "oba hotela"
     daily = build_daily_series(df, hotel)
 
     print(f"Daily series: {daily.index.min().date()} to {daily.index.max().date()} "

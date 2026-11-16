@@ -5,9 +5,17 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from card_fraud import best_f1_threshold, engineer_features
-from explain import cost_curve
+from card_fraud import best_f1_threshold, engineer_features, load_modeling_data
+from explain import cost_at_thresholds, cost_curve, optimal_cost_threshold
 from fraud_detection import add_rule_flags, combine_scores
+
+
+def naive_cost(y_true, scores, amounts, review_cost, threshold):
+    """Straightforward reference implementation of the cost of one threshold."""
+    flagged = scores >= threshold
+    missed = (y_true == 1) & ~flagged
+    alarms = (y_true == 0) & flagged
+    return amounts[missed].sum() + alarms.sum() * review_cost
 
 
 @pytest.fixture
@@ -47,6 +55,15 @@ class TestCardFeatureEngineering:
         result = engineer_features(raw_card_df)
         for column in [f"V{i}" for i in range(1, 29)]:
             pd.testing.assert_series_equal(result[column], raw_card_df[column])
+
+    def test_duplicates_removed_before_modeling(self, raw_card_df, tmp_path):
+        """A transaction in both the training and the test split would let the
+        model be scored on a row it has already seen."""
+        path = tmp_path / "cards.csv"
+        pd.concat([raw_card_df, raw_card_df.iloc[:5]]).to_csv(path, index=False)
+        X, y = load_modeling_data(path)
+        assert len(X) == len(raw_card_df)
+        assert not X.assign(Class=y.to_numpy()).duplicated().any()
 
 
 class TestThresholdSelection:
@@ -122,6 +139,34 @@ class TestCostCurve:
         costs = cost_curve(y_true, y_proba, amounts, review_cost=3.0)
         assert costs["frauds_missed"].is_monotonic_increasing
         assert costs["false_alarms"].is_monotonic_decreasing
+
+    def test_matches_naive_computation(self):
+        rng = np.random.default_rng(6)
+        y_true = (rng.random(300) < 0.1).astype(int)
+        scores = rng.random(300)
+        amounts = rng.uniform(1, 400, 300)
+        thresholds = np.concatenate([rng.random(50), scores[:20]])  # incl. exact ties
+        costs = cost_at_thresholds(y_true, scores, amounts, 3.0, thresholds)
+        expected = [naive_cost(y_true, scores, amounts, 3.0, t) for t in thresholds]
+        np.testing.assert_allclose(costs["total_cost"], expected)
+
+    def test_infinite_threshold_flags_nothing(self):
+        y_true = np.array([0, 1, 0, 1])
+        scores = np.array([0.2, 0.9, 0.95, 0.4])
+        amounts = np.array([5.0, 80.0, 7.0, 20.0])
+        row = cost_at_thresholds(y_true, scores, amounts, 3.0, [np.inf]).iloc[0]
+        assert row["frauds_missed"] == 2
+        assert row["false_alarms"] == 0
+        assert row["fraud_loss"] == pytest.approx(100.0)
+
+    def test_optimal_threshold_is_the_cheapest(self):
+        rng = np.random.default_rng(7)
+        y_true = (rng.random(400) < 0.08).astype(int)
+        scores = np.clip(y_true * 0.3 + rng.random(400) * 0.7, 0, 1)
+        amounts = rng.uniform(1, 300, 400)
+        best = optimal_cost_threshold(y_true, scores, amounts, review_cost=3.0)
+        cheapest = min(naive_cost(y_true, scores, amounts, 3.0, t) for t in np.unique(scores))
+        assert naive_cost(y_true, scores, amounts, 3.0, best) == pytest.approx(cheapest)
 
 
 class TestFraudRules:

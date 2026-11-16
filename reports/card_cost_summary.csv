@@ -1,0 +1,5 @@
+strategy,threshold,fraud_loss,review_cost,total_cost,frauds_missed,false_alarms,reduction_vs_no_model_%,review_cost_per_alarm,model
+Bez modela (nijedna transakcija se ne zaustavlja),inf,9920.44,0.0,9920.44,95,0,0.0,3.0,Random Forest
+F1-optimalan prag (izabran na treningu),0.4394812715837291,1239.1800000000003,24.0,1263.1800000000003,18,8,87.26689541996122,3.0,Random Forest
+Troškovno optimalan prag (izabran na treningu),0.1464968152866242,916.9799999999996,138.0,1054.9799999999996,14,46,89.36559265516449,3.0,Random Forest
+"Optimum na testnom skupu (samo referenca, nedostupan unaprijed)",0.36938064672923177,918.9799999999996,27.0,945.9799999999996,16,9,90.46433424323922,3.0,Random Forest

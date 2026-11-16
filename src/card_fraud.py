@@ -5,14 +5,26 @@ Dataset: "Credit Card Fraud Detection" (Machine Learning Group, ULB) --
 fraudulent (0.172%). Features V1-V28 are PCA-anonymized; Time and Amount
 are the only raw columns. Target: Class (1 = fraud).
 
-Because fraud is only ~0.17% of rows, ACCURACY IS A USELESS METRIC here --
-predicting "never fraud" scores 99.83%. This script uses average precision
-(PR-AUC) as the primary metric and tunes the decision threshold explicitly,
-since the default 0.5 cutoff is rarely the right operating point.
+Because fraud is so rare, ACCURACY IS A USELESS METRIC here -- predicting
+"never fraud" scores about 99.83%. Average precision (PR-AUC) is the primary
+metric, and the decision threshold is tuned explicitly, since the default
+0.5 cutoff is rarely the right operating point.
+
+Protocol (shared with train.py, see modeling.py):
+  - rows that are exact duplicates (identical model inputs and label) are
+    removed, so no transaction is in both the training and the test split;
+  - stratified 80/20 split; tuned hyperparameters from
+    reports/card_best_params.json if tuning.py has been run;
+  - repeated stratified 5-fold CV on the training split -> mean +/- std;
+  - the decision threshold is chosen on OUT-OF-FOLD training predictions and
+    then applied unchanged to the test split (choosing it on the test split
+    would make the reported precision and recall optimistic);
+  - the best model is chosen by mean CV PR-AUC.
+Class imbalance is handled with class weights; imbalance.py compares that
+choice with SMOTE oversampling.
 
 Usage:
     python src/card_fraud.py
-    python src/card_fraud.py --use-smote
 """
 
 import argparse
@@ -22,8 +34,7 @@ from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
+from sklearn.dummy import DummyClassifier
 from sklearn.metrics import (
     average_precision_score,
     classification_report,
@@ -31,17 +42,27 @@ from sklearn.metrics import (
     precision_recall_curve,
     roc_auc_score,
 )
-from sklearn.model_selection import train_test_split
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
 
-from plotting import FIG_DIR, add_show_argument, emit, plt, report_saved
+from modeling import (
+    CARD_METRICS,
+    MODEL_LABELS,
+    MODEL_NAMES,
+    build_pipeline,
+    load_params,
+    positive_scores,
+    repeated_cv,
+    split_data,
+    summarize_folds,
+)
+from plotting import add_show_argument, confusion_matrix_figure, emit, num, plt, report_saved
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATA_PATH = ROOT / "data" / "raw" / "creditcard.csv"
 MODEL_DIR = ROOT / "models"
-RANDOM_STATE = 42
+REPORT_DIR = ROOT / "reports"
+PARAMS_PATH = REPORT_DIR / "card_best_params.json"
 TARGET = "Class"
+CLASS_LABELS = ["Legitimna", "Prevara"]
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
@@ -73,64 +94,14 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def build_models(y_train: pd.Series, use_smote: bool) -> dict:
-    # Ratio of negatives to positives -- tells the booster how much to
-    # up-weight the rare fraud class.
-    scale_pos_weight = (y_train == 0).sum() / (y_train == 1).sum()
-
-    # With SMOTE the training set is rebalanced by oversampling, so applying
-    # class weights on top would double-count the correction.
-    class_weight = None if use_smote else "balanced"
-
-    models = {
-        "logistic_regression": LogisticRegression(
-            max_iter=2000, class_weight=class_weight, random_state=RANDOM_STATE
-        ),
-        "random_forest": RandomForestClassifier(
-            n_estimators=200,
-            max_depth=12,
-            min_samples_leaf=3,
-            class_weight=class_weight,
-            random_state=RANDOM_STATE,
-            n_jobs=-1,
-        ),
-    }
-
-    try:
-        from xgboost import XGBClassifier
-
-        models["xgboost"] = XGBClassifier(
-            n_estimators=400,
-            max_depth=5,
-            learning_rate=0.1,
-            subsample=0.9,
-            colsample_bytree=0.9,
-            scale_pos_weight=1.0 if use_smote else scale_pos_weight,
-            eval_metric="aucpr",
-            random_state=RANDOM_STATE,
-            n_jobs=-1,
-        )
-    except ImportError:
-        print("xgboost not installed -- skipping it.")
-
-    return models
-
-
-def build_pipeline(model, use_smote: bool) -> Pipeline:
-    steps = [("scaler", StandardScaler())]
-
-    if use_smote:
-        from imblearn.over_sampling import SMOTE
-        from imblearn.pipeline import Pipeline as ImbPipeline
-
-        # SMOTE must live inside the pipeline so it only ever resamples the
-        # training fold -- never the data we evaluate on.
-        steps.append(("smote", SMOTE(random_state=RANDOM_STATE)))
-        steps.append(("model", model))
-        return ImbPipeline(steps)
-
-    steps.append(("model", model))
-    return Pipeline(steps)
+def load_modeling_data(path: Path) -> tuple[pd.DataFrame, pd.Series]:
+    """Features and target with duplicate rows removed."""
+    df = engineer_features(load_data(path))
+    n_before = len(df)
+    df = df.drop_duplicates().reset_index(drop=True)
+    print(f"Removed {n_before - len(df)} duplicate rows; {len(df)} remain, "
+          f"{int(df[TARGET].sum())} of them fraudulent ({df[TARGET].mean() * 100:.3f}%).")
+    return df.drop(columns=[TARGET]), df[TARGET]
 
 
 def best_f1_threshold(y_true: np.ndarray, y_proba: np.ndarray) -> tuple[float, float]:
@@ -142,119 +113,141 @@ def best_f1_threshold(y_true: np.ndarray, y_proba: np.ndarray) -> tuple[float, f
     return float(thresholds[best_idx]), float(f1[best_idx])
 
 
-def evaluate(name: str, pipeline: Pipeline, X_test, y_test) -> dict:
-    y_proba = pipeline.predict_proba(X_test)[:, 1]
-    threshold, f1_at_best = best_f1_threshold(y_test.to_numpy(), y_proba)
-    y_pred = (y_proba >= threshold).astype(int)
-
-    tn, fp, fn, tp = confusion_matrix(y_test, y_pred).ravel()
+def evaluate(estimator, X_test, y_test, threshold: float) -> dict:
+    scores = positive_scores(estimator, X_test)
+    y_pred = (scores >= threshold).astype(int)
+    tn, fp, fn, tp = confusion_matrix(y_test, y_pred, labels=[0, 1]).ravel()
+    precision = tp / (tp + fp) if (tp + fp) else 0.0
+    recall = tp / (tp + fn) if (tp + fn) else 0.0
     return {
-        "pr_auc": average_precision_score(y_test, y_proba),
-        "roc_auc": roc_auc_score(y_test, y_proba),
-        "best_threshold": threshold,
-        "f1_at_threshold": f1_at_best,
-        "precision": tp / (tp + fp) if (tp + fp) else 0.0,
-        "recall": tp / (tp + fn) if (tp + fn) else 0.0,
+        "test_pr_auc": average_precision_score(y_test, scores),
+        "test_roc_auc": roc_auc_score(y_test, scores),
+        "threshold": threshold,
+        "test_precision": precision,
+        "test_recall": recall,
+        "test_f1": 2 * precision * recall / (precision + recall) if (precision + recall) else 0.0,
+        "test_accuracy": (tp + tn) / len(y_test),
         "frauds_caught": int(tp),
         "frauds_missed": int(fn),
         "false_alarms": int(fp),
+        "true_negatives": int(tn),
     }
 
 
 def plot_pr_curves(fitted: dict, X_test, y_test) -> None:
     fig, ax = plt.subplots(figsize=(7, 6))
     for name, pipeline in fitted.items():
-        y_proba = pipeline.predict_proba(X_test)[:, 1]
-        precision, recall, _ = precision_recall_curve(y_test, y_proba)
-        ap = average_precision_score(y_test, y_proba)
-        ax.plot(recall, precision, label=f"{name} (AP={ap:.3f})")
+        scores = positive_scores(pipeline, X_test)
+        precision, recall, _ = precision_recall_curve(y_test, scores)
+        ap = average_precision_score(y_test, scores)
+        ax.plot(recall, precision, label=f"{MODEL_LABELS[name]} (AP = {num(ap)})")
 
     baseline = y_test.mean()
     ax.axhline(baseline, linestyle="--", color="gray",
-               label=f"Chance (={baseline:.4f})")
-    ax.set_xlabel("Recall (share of fraud caught)")
-    ax.set_ylabel("Precision (share of alerts that are real)")
-    ax.set_title("Precision-Recall curves -- test set")
-    ax.legend(loc="upper right")
+               label=f"Slučajni model (= {num(baseline, 4)})")
+    ax.set_xlabel("Odziv (udio otkrivenih prevara)")
+    ax.set_ylabel("Preciznost (udio stvarnih prevara među uzbunama)")
+    ax.set_title("Preciznost-odziv krivulje na testnom skupu – prevare")
+    ax.legend(loc="lower left")
     emit(fig, "12_fraud_pr_curves.png")
 
 
-def plot_threshold_tradeoff(pipeline: Pipeline, X_test, y_test, name: str) -> None:
-    y_proba = pipeline.predict_proba(X_test)[:, 1]
-    precision, recall, thresholds = precision_recall_curve(y_test, y_proba)
+def plot_threshold_tradeoff(pipeline, X_test, y_test, name: str, threshold: float) -> None:
+    scores = positive_scores(pipeline, X_test)
+    precision, recall, thresholds = precision_recall_curve(y_test, scores)
 
     fig, ax = plt.subplots(figsize=(8, 4))
-    ax.plot(thresholds, precision[:-1], label="Precision")
-    ax.plot(thresholds, recall[:-1], label="Recall")
-    ax.set_xlabel("Decision threshold")
-    ax.set_ylabel("Score")
-    ax.set_title(f"Precision/recall trade-off vs. threshold ({name})")
-    ax.legend()
+    ax.plot(thresholds, precision[:-1], label="Preciznost")
+    ax.plot(thresholds, recall[:-1], label="Odziv")
+    ax.axvline(threshold, color="black", linestyle=":",
+               label=f"Odabrani prag ({num(threshold)}, izabran na treningu)")
+    ax.set_xlabel("Prag odlučivanja")
+    ax.set_ylabel("Vrijednost metrike")
+    ax.set_title(f"Preciznost i odziv u zavisnosti od praga – {MODEL_LABELS[name]}")
+    ax.legend(loc="lower left")
     emit(fig, "13_fraud_threshold_tradeoff.png")
 
 
-def main(data_path: Path, use_smote: bool) -> None:
+def main(data_path: Path, n_repeats: int) -> None:
     print(f"Loading data from {data_path} ...")
-    df = load_data(data_path)
-    df = engineer_features(df)
-
-    X = df.drop(columns=[TARGET])
-    y = df[TARGET]
-
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, stratify=y, random_state=RANDOM_STATE
-    )
+    X, y = load_modeling_data(data_path)
+    X_train, X_test, y_train, y_test = split_data(X, y)
     print(f"Train: {len(X_train)} rows ({y_train.sum()} fraud, {y_train.mean() * 100:.3f}%)")
     print(f"Test:  {len(X_test)} rows ({y_test.sum()} fraud, {y_test.mean() * 100:.3f}%)")
-    print(f"Imbalance handling: {'SMOTE oversampling' if use_smote else 'class weights'}\n")
 
-    results = {}
-    fitted = {}
-    for name, model in build_models(y_train, use_smote).items():
-        print(f"Training {name} ...")
-        pipeline = build_pipeline(model, use_smote)
+    params = load_params(PARAMS_PATH)
+    if params:
+        print(f"Using tuned hyperparameters from {PARAMS_PATH.name}")
+    else:
+        print("No tuned hyperparameters found -- using defaults. Run tuning.py first "
+              "for the thesis results.")
+
+    rows, fitted = {}, {}
+
+    # Chance level: a constant score gives PR-AUC equal to the fraud rate.
+    baseline = DummyClassifier(strategy="prior")
+    folds, _ = repeated_cv(baseline, X_train, y_train, CARD_METRICS, n_repeats=n_repeats)
+    baseline_scores = positive_scores(baseline.fit(X_train, y_train), X_test)
+    rows["baseline"] = {
+        **summarize_folds(folds),
+        "test_pr_auc": average_precision_score(y_test, baseline_scores),
+        "test_roc_auc": roc_auc_score(y_test, baseline_scores),
+    }
+
+    for name in MODEL_NAMES:
+        print(f"\n[{name}] repeated {n_repeats}x5-fold CV ...")
+        pipeline = build_pipeline(name, "card", list(X.columns), [], y_train, params.get(name))
+        folds, oof_scores = repeated_cv(pipeline, X_train, y_train, CARD_METRICS,
+                                        n_repeats=n_repeats)
+        summary = summarize_folds(folds)
+        threshold, oof_f1 = best_f1_threshold(y_train.to_numpy(), oof_scores)
+        print(f"[{name}] CV PR-AUC {summary['cv_pr_auc_mean']:.4f} "
+              f"+/- {summary['cv_pr_auc_std']:.4f}; threshold {threshold:.4f} "
+              f"(out-of-fold F1 {oof_f1:.4f})")
+
         pipeline.fit(X_train, y_train)
         fitted[name] = pipeline
-        results[name] = evaluate(name, pipeline, X_test, y_test)
+        rows[name] = {**summary, "oof_f1": oof_f1, **evaluate(pipeline, X_test, y_test, threshold)}
 
-    results_df = pd.DataFrame(results).T.sort_values("pr_auc", ascending=False)
-    print("\nTest-set results (ranked by PR-AUC -- the metric that matters here):")
-    print(results_df.round(4).to_string())
+    results = pd.DataFrame(rows).T
+    results.insert(0, "model", [MODEL_LABELS[i] for i in results.index])
+    best_name = results.loc[MODEL_NAMES, "cv_pr_auc_mean"].astype(float).idxmax()
+    results["selected"] = results.index == best_name
 
-    print(
-        "\n*** These are SINGLE-SPLIT figures. Do not quote them as headline\n"
-        "    results. With only ~394 training frauds, fold-to-fold variance is\n"
-        "    roughly +/- 0.03 PR-AUC, so differences smaller than that are noise.\n"
-        "    Run `python src/tuning.py --task card` for the repeated-CV interval,\n"
-        "    which is the defensible number to report. ***"
-    )
+    show_cols = ["cv_pr_auc_mean", "cv_pr_auc_std", "test_pr_auc", "test_roc_auc",
+                 "test_precision", "test_recall", "frauds_caught", "frauds_missed",
+                 "false_alarms"]
+    print("\nResults (ranked by CV PR-AUC, the metric that matters here):")
+    print(results[show_cols].astype(float).round(4).sort_values(
+        "cv_pr_auc_mean", ascending=False).to_string())
 
-    best_name = results_df.index[0]
     best_pipeline = fitted[best_name]
-    best = results[best_name]
+    best = rows[best_name]
+    print(f"\nBest model (by mean CV PR-AUC): {best_name}")
+    print(f"  At threshold {best['threshold']:.4f} (chosen on training data): "
+          f"caught {best['frauds_caught']} / {best['frauds_caught'] + best['frauds_missed']} "
+          f"frauds, missed {best['frauds_missed']}, with {best['false_alarms']} false alarms.")
 
-    print(f"\nBest model: {best_name}")
-    print(f"  At threshold {best['best_threshold']:.4f}: "
-          f"caught {best['frauds_caught']} / {best['frauds_caught'] + best['frauds_missed']} frauds, "
-          f"missed {best['frauds_missed']}, with {best['false_alarms']} false alarms.")
-
-    y_proba = best_pipeline.predict_proba(X_test)[:, 1]
-    y_pred = (y_proba >= best["best_threshold"]).astype(int)
-    print("\n" + classification_report(y_test, y_pred, target_names=["Legit", "Fraud"], digits=4))
-
-    print("Note: accuracy is omitted on purpose -- predicting 'never fraud' "
-          f"would score {(1 - y_test.mean()) * 100:.2f}% and catch nothing.")
+    y_pred = (positive_scores(best_pipeline, X_test) >= best["threshold"]).astype(int)
+    print("\n" + classification_report(y_test, y_pred, target_names=CLASS_LABELS, digits=4))
+    print("Note: predicting 'never fraud' would score "
+          f"{(1 - y_test.mean()) * 100:.2f}% accuracy and catch nothing.")
 
     plot_pr_curves(fitted, X_test, y_test)
-    plot_threshold_tradeoff(best_pipeline, X_test, y_test, best_name)
+    plot_threshold_tradeoff(best_pipeline, X_test, y_test, best_name, best["threshold"])
+    cm = confusion_matrix(y_test, y_pred, labels=[0, 1])
+    emit(confusion_matrix_figure(
+        cm, CLASS_LABELS, f"Matrica konfuzije – {MODEL_LABELS[best_name]} (testni skup)"
+    ), "29_card_confusion_matrix.png")
 
     MODEL_DIR.mkdir(parents=True, exist_ok=True)
     joblib.dump(
-        {"pipeline": best_pipeline, "threshold": best["best_threshold"]},
+        {"pipeline": best_pipeline, "threshold": best["threshold"], "model_name": best_name},
         MODEL_DIR / "card_fraud_model.joblib",
         compress=3,
     )
-    results_df.to_csv(ROOT / "reports" / "card_fraud_comparison.csv")
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    results.to_csv(REPORT_DIR / "card_fraud_comparison.csv")
     print(f"\nSaved model + threshold to {MODEL_DIR / 'card_fraud_model.joblib'}")
     print(report_saved())
 
@@ -262,8 +255,8 @@ def main(data_path: Path, use_smote: bool) -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data-path", type=Path, default=DEFAULT_DATA_PATH)
-    parser.add_argument("--use-smote", action="store_true",
-                        help="Oversample the minority class with SMOTE instead of class weights")
+    parser.add_argument("--n-repeats", type=int, default=2,
+                        help="Repeats of stratified 5-fold CV (mean +/- std)")
     add_show_argument(parser)
     args = parser.parse_args()
-    main(args.data_path, args.use_smote)
+    main(args.data_path, args.n_repeats)

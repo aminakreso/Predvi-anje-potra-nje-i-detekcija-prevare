@@ -1,86 +1,79 @@
 ,0
-cat__country_PRT,0.9318541
-cat__deposit_type_Non Refund,0.8813543
-num__required_car_parking_spaces,0.55338645
-num__total_of_special_requests,0.5425327
-num__lead_time,0.53142214
-cat__market_segment_Online TA,0.44060612
-num__adr,0.3253531
-num__previous_cancellations,0.2921642
-cat__deposit_type_No Deposit,0.26810667
-cat__room_type_changed_0,0.25761834
-cat__customer_type_Transient,0.23223147
-cat__arrival_date_year_2015,0.21103257
-num__booking_changes,0.1650864
-num__arrival_date_week_number,0.16209191
-cat__market_segment_Offline TA/TO,0.15708384
-cat__customer_type_Transient-Party,0.15210176
-cat__hotel_City Hotel,0.13954753
-num__previous_bookings_not_canceled,0.096974954
-cat__country_DEU,0.07572177
-cat__meal_SC,0.06806082
-num__arrival_date_day_of_month,0.066720724
-cat__market_segment_Groups,0.06288444
-cat__arrival_date_year_2016,0.0608076
-cat__arrival_date_year_2017,0.05775683
-num__total_nights,0.05729738
-cat__country_GBR,0.04995712
-cat__market_segment_Direct,0.046855167
-cat__country_ESP,0.04396528
-cat__country_ITA,0.038098052
-cat__country_FRA,0.036847446
-cat__has_agent_0,0.036380485
-num__adults,0.03621379
-num__total_guests,0.035894386
-cat__country_Other,0.035496358
-num__stays_in_week_nights,0.033291165
-num__arrival_month_num,0.032964814
-cat__has_company_0,0.032864388
-cat__meal_HB,0.032303944
-cat__room_type_changed_1,0.02963968
-num__stays_in_weekend_nights,0.028469458
-cat__distribution_channel_Corporate,0.025718931
-num__days_in_waiting_list,0.025576005
-cat__arrival_date_month_July,0.024780205
-cat__arrival_date_month_August,0.02428636
-cat__meal_Undefined,0.020057978
-cat__is_repeated_guest_0,0.018629117
-cat__distribution_channel_Direct,0.016406737
-cat__country_IRL,0.015865419
-cat__customer_type_Contract,0.015686262
-cat__country_BEL,0.015628304
-cat__meal_BB,0.015329726
-cat__country_BRA,0.015150278
-cat__hotel_Resort Hotel,0.013943904
-cat__country_NLD,0.01388676
-num__children,0.012255524
-cat__arrival_date_month_June,0.011385441
-cat__distribution_channel_TA/TO,0.0108357165
-cat__arrival_date_month_October,0.010613993
-cat__arrival_date_month_September,0.0096681435
-cat__arrival_date_month_May,0.009402839
-cat__market_segment_Corporate,0.008636783
-cat__arrival_date_month_April,0.008356586
-cat__country_AUT,0.008127145
-cat__country_CHE,0.00782691
-cat__has_company_1,0.005874367
-cat__arrival_date_month_November,0.005465862
-cat__arrival_date_month_March,0.0048399074
-cat__is_family_0,0.0044650673
-cat__arrival_date_month_February,0.004316733
-cat__distribution_channel_GDS,0.0032415923
-cat__meal_FB,0.0030632294
-cat__country_USA,0.002862338
-cat__country_CN,0.0024062078
-cat__is_family_1,0.0019902498
-cat__has_agent_1,0.0019531501
-cat__market_segment_Aviation,0.0019003577
-cat__is_repeated_guest_1,0.0015886435
-num__babies,0.0013161497
-cat__market_segment_Complementary,0.0011515089
-cat__arrival_date_month_December,0.0011314446
-cat__deposit_type_Refundable,0.00052957615
-cat__arrival_date_month_January,0.00043535893
-cat__customer_type_Group,0.00023600626
-cat__distribution_channel_Undefined,0.0
-cat__market_segment_Undefined,0.0
+country = PRT,0.70123017
+lead_time,0.5408145
+total_of_special_requests,0.48391876
+market_segment = Online TA,0.37912762
+adr,0.25953388
+market_segment = Offline TA/TO,0.2105475
+arrival_date_year = 2015,0.19747822
+booking_changes,0.18236999
+customer_type = Transient,0.14483137
+arrival_date_week_number,0.11563997
+previous_bookings_not_canceled,0.10124111
+arrival_date_year = 2017,0.09410321
+previous_cancellations,0.090626836
+customer_type = Transient-Party,0.06536687
+arrival_date_year = 2016,0.0630169
+total_nights,0.061759625
+meal = SC,0.05120344
+country = FRA,0.049139045
+hotel = City Hotel,0.048884593
+country = GBR,0.048774637
+deposit_type = No Deposit,0.048154406
+distribution_channel = TA/TO,0.047581036
+stays_in_week_nights,0.04727476
+arrival_date_day_of_month,0.045282543
+country = DEU,0.041872192
+deposit_type = Non Refund,0.03691359
+market_segment = Direct,0.036034446
+arrival_month_num,0.032252964
+has_agent = 0,0.029965064
+country = ESP,0.029040178
+country = ostale (rijetke),0.026885955
+total_guests,0.026455158
+market_segment = Groups,0.022865133
+stays_in_weekend_nights,0.021201696
+adults,0.019713808
+country = ITA,0.017589055
+distribution_channel = Direct,0.017385902
+country = NLD,0.015713649
+country = BRA,0.014722926
+country = BEL,0.014519656
+hotel = Resort Hotel,0.014096905
+meal = HB,0.0134801185
+meal = BB,0.013350257
+is_repeated_guest = 0,0.012634598
+country = AUT,0.011570025
+arrival_date_month = July,0.010533347
+has_agent = 1,0.010442565
+children,0.010149273
+customer_type = Contract,0.009970624
+country = IRL,0.008773116
+arrival_date_month = June,0.008242628
+distribution_channel = Corporate,0.00820165
+arrival_date_month = August,0.007939171
+country = CHE,0.0069856243
+has_company = 0,0.006252559
+days_in_waiting_list,0.0060397633
+arrival_date_month = May,0.0057858136
+arrival_date_month = October,0.0057494934
+arrival_date_month = September,0.0054484997
+is_family = 0,0.0050404505
+arrival_date_month = April,0.0040488257
+arrival_date_month = March,0.0040432326
+market_segment = Corporate,0.0040249717
+meal = ostale (rijetke),0.0038587342
+is_repeated_guest = 1,0.003799857
+arrival_date_month = November,0.0034797124
+country = USA,0.002696748
+arrival_date_month = February,0.0026809035
+has_company = 1,0.0022679588
+market_segment = ostale (rijetke),0.0022643607
+is_family = 1,0.0020564788
+arrival_date_month = December,0.001363072
+babies,0.001091663
+distribution_channel = ostale (rijetke),0.0009873862
+arrival_date_month = January,0.0009243238
+country = CN,0.00087090663
+customer_type = ostale (rijetke),0.00018225666
+deposit_type = ostale (rijetke),0.0

@@ -1,501 +1,501 @@
 hotel,arrival_date_year,arrival_date_month,arrival_date_day_of_month,country,lead_time,adr,total_nights,total_guests,deposit_type,market_segment,previous_cancellations,booking_changes,flag_last_minute_high_value,flag_serial_canceller,flag_excessive_changes,flag_group_rate_mismatch,flag_suspicious_zero_rate,flag_long_unsecured_stay,rule_score,anomaly_score,is_anomaly,risk_score
-Resort Hotel,2017,February,10,PRT,2,0.0,14,2.0,No Deposit,Direct,0,6,0,0,1,0,1,1,3,0.05204690645759469,1,91.96
-Resort Hotel,2016,October,7,GBR,359,66.0,14,2.0,No Deposit,Groups,0,5,0,0,1,0,0,1,2,0.0467952769942962,1,71.19
-City Hotel,2017,April,3,Other,1,150.0,16,1.0,No Deposit,Direct,0,7,0,0,1,0,0,1,2,0.03908087585668962,1,70.06
-Resort Hotel,2016,February,9,PRT,26,0.0,6,2.0,No Deposit,Direct,0,5,0,0,1,0,1,0,2,0.03725952677768318,1,69.79
-Resort Hotel,2017,July,6,CHE,3,0.0,11,2.0,No Deposit,Direct,0,8,0,0,1,0,1,0,2,0.016913628232034905,1,66.8
-Resort Hotel,2015,September,24,PRT,352,0.0,4,27.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,0.011064283987767487,1,65.94
-Resort Hotel,2015,October,4,PRT,338,0.0,2,55.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,0.010778137782626485,1,65.9
-Resort Hotel,2015,September,21,PRT,349,0.0,4,27.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,0.006805506908990844,1,65.31
-Resort Hotel,2015,September,7,ESP,30,0.0,46,2.0,No Deposit,Online TA,0,17,0,0,1,0,1,0,2,0.006381526008628069,1,65.25
-Resort Hotel,2016,February,25,GBR,0,40.0,28,1.0,No Deposit,Online TA,0,6,0,0,1,0,0,1,2,0.0007971614433630592,1,64.43
-Resort Hotel,2017,January,6,PRT,1,0.0,2,4.0,No Deposit,Direct,0,2,0,0,0,1,1,0,2,-0.0026188306391472516,0,63.93
-Resort Hotel,2015,October,6,PRT,328,0.0,7,20.0,No Deposit,Direct,0,1,0,0,0,1,1,0,2,-0.006035990271301306,0,63.43
-City Hotel,2016,July,23,PRT,206,0.0,48,2.0,No Deposit,Online TA,0,6,0,0,1,0,1,0,2,-0.007514976509232052,0,63.21
-Resort Hotel,2017,February,18,PRT,0,0.0,1,4.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.008027140914970254,0,63.13
-Resort Hotel,2017,July,25,FRA,149,0.0,29,2.0,No Deposit,Online TA,0,13,0,0,1,0,1,0,2,-0.009777094296400057,0,62.88
-Resort Hotel,2015,October,6,PRT,328,0.0,7,6.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.012409348070163029,0,62.49
-Resort Hotel,2015,October,6,PRT,328,0.0,7,5.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.012409348070163029,0,62.49
-Resort Hotel,2015,October,12,PRT,334,0.0,7,5.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.012983319013767924,0,62.4
-Resort Hotel,2015,October,12,PRT,334,0.0,7,20.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.012983319013767924,0,62.4
-Resort Hotel,2015,October,12,PRT,334,0.0,7,10.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.012983319013767924,0,62.4
-Resort Hotel,2017,July,27,ESP,45,0.0,7,4.0,No Deposit,Online TA,0,1,0,0,0,1,1,0,2,-0.01578339286076602,0,61.99
-Resort Hotel,2015,September,7,PRT,336,0.0,3,50.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.016085781636550944,0,61.95
-Resort Hotel,2015,September,3,PRT,304,0.0,3,40.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.017306146976464043,0,61.77
-City Hotel,2016,January,5,PRT,1,70.67,17,2.0,No Deposit,Direct,0,6,0,0,1,0,0,1,2,-0.022463089941266112,0,61.01
-Resort Hotel,2016,August,2,PRT,5,0.0,1,4.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.023556380880970507,0,60.85
-Resort Hotel,2017,January,13,PRT,1,0.0,1,4.0,No Deposit,Online TA,0,1,0,0,0,1,1,0,2,-0.024616505794254284,0,60.69
-Resort Hotel,2016,September,20,GBR,174,0.0,6,4.0,No Deposit,Online TA,0,4,0,0,0,1,1,0,2,-0.025715622771934177,0,60.53
-Resort Hotel,2015,October,26,PRT,24,0.0,30,1.0,No Deposit,Complementary,0,5,0,0,1,0,0,0,1,0.10670395278851297,1,60.0
-City Hotel,2017,August,3,PRT,2,216.5,1,3.0,No Deposit,Groups,0,10,1,0,1,0,0,0,2,-0.036279441247881905,0,58.98
-Resort Hotel,2015,August,26,CN,83,0.0,5,2.0,No Deposit,Online TA,0,5,0,0,1,0,1,0,2,-0.03946875547180573,0,58.51
-Resort Hotel,2015,October,3,PRT,361,0.0,7,26.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,1,0,2,-0.04743522426728314,0,57.34
-Resort Hotel,2015,September,5,PRT,333,0.0,7,26.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,1,0,2,-0.04804259170466352,0,57.25
-Resort Hotel,2015,September,12,PRT,340,0.0,7,26.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,1,0,2,-0.049271301377577625,0,57.07
-Resort Hotel,2015,September,26,PRT,354,0.0,7,26.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,1,0,2,-0.04931704811281601,0,57.06
-Resort Hotel,2015,September,19,PRT,347,0.0,7,26.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,1,0,2,-0.05228739381736569,0,56.63
-Resort Hotel,2017,August,6,PRT,250,251.43,14,3.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.068383628717399,1,54.37
-Resort Hotel,2015,August,15,PRT,29,140.0,12,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.06532917660606152,1,53.92
-Resort Hotel,2017,February,3,GBR,1,42.11,45,1.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.06505082824210784,1,53.88
-Resort Hotel,2017,July,9,PRT,108,143.5,14,2.0,No Deposit,Direct,1,1,0,0,0,0,0,1,1,0.05846788755106602,1,52.91
-Resort Hotel,2017,May,25,GBR,203,106.0,7,4.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.05294381051115615,1,52.1
-Resort Hotel,2016,April,23,ESP,26,121.0,7,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.051510188334287554,1,51.89
-Resort Hotel,2017,July,24,ESP,5,0.0,8,1.0,No Deposit,Direct,0,3,0,0,0,0,1,0,1,0.05043576097618929,1,51.73
-Resort Hotel,2017,August,18,PRT,33,310.0,3,4.0,No Deposit,Online TA,0,8,0,0,1,0,0,0,1,0.04802879022500839,1,51.37
-Resort Hotel,2015,August,15,PRT,148,160.0,8,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.0473070888460182,1,51.27
-Resort Hotel,2017,August,18,PRT,33,270.0,3,2.0,No Deposit,Online TA,0,10,0,0,1,0,0,0,1,0.04615832065854131,1,51.1
-Resort Hotel,2017,January,28,PRT,17,51.0,1,4.0,Non Refund,Groups,0,0,0,0,0,1,0,0,1,0.04542537730813434,1,50.99
-Resort Hotel,2015,August,22,PRT,112,244.0,14,4.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.04448147915922962,1,50.85
-City Hotel,2016,May,13,PRT,4,0.0,1,4.0,No Deposit,Complementary,0,2,0,0,0,1,0,0,1,0.04283888278512449,1,50.61
-Resort Hotel,2016,April,22,PRT,35,81.5,3,3.0,No Deposit,Corporate,0,5,0,0,1,0,0,0,1,0.03951592062787934,1,50.12
-Resort Hotel,2016,April,10,GBR,275,11.53,17,2.0,No Deposit,Groups,0,6,0,0,1,0,0,0,1,0.03785348276514888,1,49.88
-City Hotel,2015,December,30,PRT,2,268.17,3,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,0.03557777087966363,1,49.54
-City Hotel,2017,April,21,PRT,4,0.0,2,4.0,No Deposit,Complementary,0,1,0,0,0,1,0,0,1,0.034186351097376666,1,49.34
-Resort Hotel,2016,September,16,Other,27,165.0,14,4.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.03346145575765236,1,49.23
-Resort Hotel,2015,August,1,Other,113,110.5,60,1.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.031760263112913134,1,48.98
-Resort Hotel,2017,July,1,PRT,74,115.0,30,1.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.031099298438414857,1,48.89
-Resort Hotel,2016,July,5,Other,126,110.0,69,1.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.03047355129016105,1,48.79
-City Hotel,2017,March,7,ITA,1,95.0,14,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,0.030157628181127216,1,48.75
-Resort Hotel,2017,June,9,PRT,178,134.0,15,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.03006557265577292,1,48.73
-Resort Hotel,2015,September,27,PRT,81,66.43,14,1.0,No Deposit,Direct,1,2,0,0,0,0,0,1,1,0.029330750884599133,1,48.63
-City Hotel,2016,August,9,PRT,165,106.0,24,1.0,No Deposit,Corporate,0,4,0,0,0,0,0,1,1,0.028299860111309583,1,48.47
-City Hotel,2017,June,14,PRT,7,0.0,1,4.0,No Deposit,Complementary,0,1,0,0,0,1,0,0,1,0.02740627570921106,1,48.34
-Resort Hotel,2017,January,22,Other,0,49.1,1,4.0,No Deposit,Direct,0,0,0,0,0,1,0,0,1,0.027050963483104096,1,48.29
-Resort Hotel,2017,March,5,GBR,80,0.26,38,2.0,No Deposit,Groups,0,10,0,0,1,0,0,0,1,0.02558335287342317,1,48.07
-Resort Hotel,2015,October,26,PRT,27,36.0,19,1.0,No Deposit,Corporate,0,0,0,0,0,0,0,1,1,0.025184027240326756,1,48.02
-Resort Hotel,2016,January,14,PRT,3,38.0,11,1.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.024540063300874104,1,47.92
-Resort Hotel,2017,August,15,ESP,43,326.26102999999915,5,4.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.024440485085951202,1,47.91
-Resort Hotel,2017,July,13,GBR,20,0.0,12,2.0,No Deposit,Complementary,0,7,0,0,1,0,0,0,1,0.023385084323485295,1,47.75
-Resort Hotel,2015,July,15,PRT,1,326.26102999999915,1,2.0,No Deposit,Corporate,0,0,1,0,0,0,0,0,1,0.022050882510965653,1,47.56
-Resort Hotel,2016,February,25,GBR,709,68.0,28,2.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.020767431081741172,1,47.37
-Resort Hotel,2016,July,16,PRT,144,108.4,15,1.0,No Deposit,Direct,2,1,0,0,0,0,0,1,1,0.02070774515304996,1,47.36
-City Hotel,2017,June,14,Other,2,110.0,14,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,0.020081138097748807,1,47.27
-Resort Hotel,2015,July,16,PRT,0,198.0,2,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,0.019705700999304798,1,47.21
-Resort Hotel,2016,January,15,Other,0,0.0,3,3.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,0.019194399595528044,1,47.14
-City Hotel,2016,October,19,Other,2,170.0,23,1.0,No Deposit,Corporate,0,4,0,0,0,0,0,1,1,0.0191750978461096,1,47.13
-Resort Hotel,2016,July,9,Other,131,0.0,9,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,0.01889743663200605,1,47.09
-Resort Hotel,2016,September,14,GBR,335,66.0,5,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.018178687132846538,1,46.99
-Resort Hotel,2015,November,2,Other,31,52.2,15,2.0,No Deposit,Corporate,0,5,0,0,1,0,0,0,1,0.017750746427275477,1,46.92
-City Hotel,2017,August,17,ITA,288,44.0,4,4.0,No Deposit,Direct,0,3,0,0,0,1,0,0,1,0.01761714907632772,1,46.9
-Resort Hotel,2016,May,11,GBR,5,0.0,5,4.0,No Deposit,Corporate,0,1,0,0,0,1,0,0,1,0.01753975079006831,1,46.89
-City Hotel,2017,August,29,GBR,0,270.0,1,5.0,No Deposit,Offline TA/TO,0,3,1,0,0,0,0,0,1,0.017264709797138345,1,46.85
-Resort Hotel,2017,July,30,PRT,95,310.75,5,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.017278030531473476,1,46.85
-Resort Hotel,2017,July,26,IRL,328,126.66,14,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,0.01691394761111198,1,46.8
-Resort Hotel,2016,August,1,DEU,0,231.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,0.01677671724030505,1,46.78
-City Hotel,2017,February,24,PRT,2,0.0,1,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,0.015605565997391158,1,46.61
-Resort Hotel,2016,November,16,IRL,4,33.26,17,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.01551987934609833,1,46.6
-Resort Hotel,2015,July,18,PRT,0,249.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,0.015563565652416678,1,46.6
-Resort Hotel,2017,April,26,PRT,11,161.08,4,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.015382736107028894,1,46.57
-City Hotel,2015,October,4,BRA,5,95.0,19,1.0,No Deposit,Corporate,0,0,0,0,0,0,0,1,1,0.014581488617074534,1,46.46
-Resort Hotel,2015,October,10,BEL,78,106.0,21,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,0.01375110393220036,1,46.34
-Resort Hotel,2015,November,3,Other,24,40.0,13,1.0,No Deposit,Corporate,0,5,0,0,1,0,0,0,1,0.012768812376147909,1,46.19
-City Hotel,2016,June,19,PRT,0,199.0,1,3.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,0.011193458921973654,1,45.96
-Resort Hotel,2016,February,16,PRT,8,45.0,14,1.0,No Deposit,Online TA,0,1,0,0,0,0,0,1,1,0.01099719563086643,1,45.93
-Resort Hotel,2017,June,21,IRL,165,138.5,14,3.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.010893145038239349,1,45.91
-Resort Hotel,2016,June,1,PRT,99,119.76,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.010600727882236649,1,45.87
-Resort Hotel,2015,July,4,PRT,183,130.0,14,3.0,No Deposit,Direct,1,0,0,0,0,0,0,1,1,0.009963745362212784,1,45.78
-Resort Hotel,2016,June,1,PRT,107,90.08,14,2.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.009384628192291133,1,45.69
-Resort Hotel,2016,August,18,FRA,1,242.0,1,3.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,0.008419752696181892,1,45.55
-Resort Hotel,2015,November,3,ITA,24,40.0,13,1.0,No Deposit,Corporate,0,6,0,0,1,0,0,0,1,0.008101569120988805,1,45.5
-Resort Hotel,2015,August,27,BEL,34,150.86,14,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,0.0070601106004928305,1,45.35
-Resort Hotel,2016,February,20,PRT,1,0.0,1,4.0,No Deposit,Complementary,0,1,0,0,0,1,0,0,1,0.006603925558508195,1,45.28
-Resort Hotel,2017,March,15,GBR,120,45.0,3,1.0,No Deposit,Corporate,0,6,0,0,1,0,0,0,1,0.006554789051561816,1,45.28
-Resort Hotel,2017,March,8,BEL,172,0.0,5,2.0,No Deposit,Direct,0,3,0,0,0,0,1,0,1,0.006373325936926855,1,45.25
-Resort Hotel,2016,October,7,Other,45,147.5,4,2.0,No Deposit,Direct,0,6,0,0,1,0,0,0,1,0.006229919204927992,1,45.23
-Resort Hotel,2016,June,25,PRT,101,274.0,2,4.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.006125612342596787,1,45.21
-Resort Hotel,2017,January,19,Other,0,49.1,3,4.0,No Deposit,Direct,0,3,0,0,0,1,0,0,1,0.005399557720768944,1,45.11
-Resort Hotel,2015,September,6,DEU,152,81.82,22,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.005249087875315528,1,45.09
-Resort Hotel,2017,March,12,GBR,96,65.09,11,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.004962413085227713,1,45.04
-Resort Hotel,2016,September,29,CHE,19,19.0,4,2.0,No Deposit,Direct,0,7,0,0,1,0,0,0,1,0.004033612800032338,1,44.91
-Resort Hotel,2017,February,19,PRT,31,50.0,1,4.0,No Deposit,Online TA,0,2,0,0,0,1,0,0,1,0.0036568616527269393,1,44.85
-City Hotel,2015,December,19,PRT,0,0.0,1,3.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,0.0036034224931398295,1,44.84
-Resort Hotel,2015,July,14,PRT,113,187.5,15,3.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,0.003524858196898517,1,44.83
-Resort Hotel,2016,December,20,BRA,99,0.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,0.003485997439390043,1,44.83
-Resort Hotel,2017,April,22,PRT,2,0.0,1,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,0.003392749848471266,1,44.81
-City Hotel,2016,January,10,PRT,4,75.0,20,2.0,No Deposit,Direct,1,0,0,0,0,0,0,1,1,0.0033834399094055945,1,44.81
-Resort Hotel,2017,August,7,Other,1,245.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,0.0031763072637042145,1,44.78
-City Hotel,2016,January,30,PRT,0,42.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,0.0031174426515298004,1,44.77
-City Hotel,2016,October,2,PRT,3,0.0,14,1.0,No Deposit,Complementary,0,3,0,0,0,0,0,1,1,0.0027706860753854423,1,44.72
-Resort Hotel,2017,August,27,CHE,0,220.5,1,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,0.0025787163350013964,1,44.69
-Resort Hotel,2017,February,23,GBR,337,46.4,28,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,0.0023089554183765015,1,44.65
-Resort Hotel,2017,April,5,GBR,152,48.0,4,2.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.0020877349544332624,1,44.62
-Resort Hotel,2017,April,4,USA,151,42.0,5,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.0017443172701542276,1,44.57
-Resort Hotel,2016,August,28,PRT,10,213.0,5,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.0012514983463305374,1,44.5
-City Hotel,2016,March,1,Other,1,92.5,14,1.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.0010603375481927912,1,44.47
-Resort Hotel,2016,September,5,DEU,228,88.0,21,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.0004274140889314326,1,44.38
-Resort Hotel,2015,July,1,Other,118,80.0,14,2.0,No Deposit,Direct,0,3,0,0,0,0,0,1,1,0.0003499153343400341,1,44.36
-Resort Hotel,2016,September,8,CHE,2,199.0,1,3.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-3.6971622037196283e-06,0,44.31
-Resort Hotel,2016,August,1,PRT,1,282.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.0002272948266539565,0,44.28
-Resort Hotel,2016,September,17,BEL,204,102.86,21,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.0007917451687151633,0,44.2
-City Hotel,2016,July,16,FRA,1,0.0,13,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.0012405081265914886,0,44.13
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-City Hotel,2016,March,19,PRT,0,199.0,1,3.0,No Deposit,Direct,0,2,1,0,0,0,0,0,1,-0.0016227011828338078,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2016,June,4,PRT,36,0.0,4,2.0,No Deposit,Direct,0,2,0,0,0,0,1,0,1,-0.0016244229367466945,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.001680803669450781,0,44.07
-Resort Hotel,2017,June,21,ITA,82,159.0,14,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.0018433415276662979,0,44.04
-City Hotel,2015,December,17,PRT,15,0.0,2,5.0,No Deposit,Complementary,0,1,0,0,0,1,0,0,1,-0.0023172195598571976,0,43.97
-Resort Hotel,2017,February,4,DEU,109,0.0,9,3.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.0027041586687045482,0,43.92
-City Hotel,2017,June,20,ITA,74,318.5,2,5.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.0030105408358483965,0,43.87
-Resort Hotel,2017,January,14,PRT,4,0.0,9,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.0031604988422657687,0,43.85
-City Hotel,2015,July,25,PRT,0,0.0,1,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.0032801323629654267,0,43.83
-City Hotel,2016,January,8,BRA,1,76.5,2,2.0,No Deposit,Online TA,11,0,0,1,0,0,0,0,1,-0.0038063804536887513,0,43.75
-Resort Hotel,2016,December,30,PRT,31,326.26102999999915,2,2.0,No Deposit,Groups,0,6,0,0,1,0,0,0,1,-0.003981479910133756,0,43.73
-City Hotel,2017,February,16,ESP,2,198.0,3,3.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.004081702050293234,0,43.71
-Resort Hotel,2017,May,7,GBR,275,0.0,15,2.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.004120682954273036,0,43.71
-Resort Hotel,2015,August,14,CHE,0,203.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.0045349639604832515,0,43.65
-Resort Hotel,2017,January,15,PRT,5,0.0,1,3.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.0047292206750212396,0,43.62
-Resort Hotel,2017,August,6,PRT,250,201.43,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.0047592102868631025,0,43.61
-Resort Hotel,2015,July,16,PRT,21,160.0,14,1.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.005047842481710196,0,43.57
-City Hotel,2016,March,2,Other,0,75.65,21,1.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,-0.005406831668928969,0,43.52
-Resort Hotel,2015,August,14,PRT,4,16.0,1,4.0,No Deposit,Direct,1,1,0,0,0,1,0,0,1,-0.0054343266084579955,0,43.51
-City Hotel,2016,November,14,PRT,3,93.0,34,2.0,No Deposit,Corporate,0,3,0,0,0,0,0,1,1,-0.005751158537534828,0,43.47
-City Hotel,2016,April,29,Other,0,197.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.005841320159995833,0,43.45
-Resort Hotel,2016,December,27,PRT,12,0.0,4,2.0,No Deposit,Direct,0,3,0,0,0,0,1,0,1,-0.0059129140317280005,0,43.44
-City Hotel,2017,March,31,BEL,3,110.0,14,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,-0.006338342361768223,0,43.38
-Resort Hotel,2016,October,11,ITA,214,81.0,9,2.0,No Deposit,Groups,0,7,0,0,1,0,0,0,1,-0.006785865495816612,0,43.32
-Resort Hotel,2016,October,25,Other,23,138.33,6,3.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.0068311439906754146,0,43.31
-City Hotel,2017,July,24,PRT,14,0.0,2,3.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.006981990567479501,0,43.29
-Resort Hotel,2017,March,1,Other,0,0.0,1,1.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.0071698778759681225,0,43.26
-Resort Hotel,2016,April,24,PRT,123,0.0,2,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.00726058958172382,0,43.25
-Resort Hotel,2016,July,18,Other,0,210.0,1,5.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.0072201303243742965,0,43.25
-Resort Hotel,2016,May,1,NLD,103,72.0,7,4.0,No Deposit,Groups,0,7,0,0,1,0,0,0,1,-0.00727885433393205,0,43.24
-City Hotel,2015,December,11,PRT,11,0.0,2,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.00783940409883932,0,43.16
-Resort Hotel,2016,February,3,PRT,46,30.0,26,1.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.00794520776895069,0,43.15
-City Hotel,2017,June,19,PRT,3,0.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.00788274153396773,0,43.15
-Resort Hotel,2016,February,3,PRT,46,38.0,26,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.008228336092002242,0,43.1
-Resort Hotel,2017,April,5,GBR,152,48.0,5,2.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.008248029783098354,0,43.1
-City Hotel,2016,January,18,PRT,0,40.0,1,1.0,No Deposit,Corporate,3,0,0,1,0,0,0,0,1,-0.008372748342983405,0,43.08
-Resort Hotel,2016,August,31,ESP,2,202.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.008747947795781807,0,43.03
-Resort Hotel,2016,September,9,PRT,0,0.0,1,3.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.008753766128922535,0,43.03
-City Hotel,2015,July,24,PRT,0,0.0,2,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.008838962042095444,0,43.01
-Resort Hotel,2017,April,5,GBR,152,67.0,5,2.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.00916694099459947,0,42.97
-Resort Hotel,2015,July,1,Other,118,62.0,14,1.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,-0.00921533225291038,0,42.96
-Resort Hotel,2015,July,4,PRT,32,0.0,1,4.0,No Deposit,Complementary,0,2,0,0,0,1,0,0,1,-0.009430410037667425,0,42.93
-Resort Hotel,2016,May,25,GBR,224,40.0,5,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.010531858883507939,0,42.77
-Resort Hotel,2015,July,7,PRT,0,195.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.010918979299184728,0,42.71
-Resort Hotel,2016,March,19,PRT,57,20.0,2,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.01100207228134309,0,42.7
-Resort Hotel,2017,January,24,GBR,88,41.47,35,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.011281146880678827,0,42.66
-City Hotel,2017,May,19,Other,0,305.0,1,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.011371300252744243,0,42.64
-City Hotel,2016,August,31,PRT,121,0.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.011829076078466727,0,42.57
-Resort Hotel,2016,April,25,PRT,13,77.0,33,2.0,No Deposit,Corporate,0,0,0,0,0,0,0,1,1,-0.011999684077471762,0,42.55
-Resort Hotel,2015,September,15,PRT,222,38.0,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.011974836889784735,0,42.55
-Resort Hotel,2016,July,14,PRT,127,227.0,7,4.0,No Deposit,Direct,0,6,0,0,1,0,0,0,1,-0.012116434937938014,0,42.53
-City Hotel,2015,July,15,PRT,0,0.0,7,2.0,No Deposit,Direct,0,4,0,0,0,0,1,0,1,-0.012228749294927899,0,42.52
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.012524143826017298,0,42.47
-City Hotel,2016,May,9,IRL,3,110.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,-0.012611533934301367,0,42.46
-Resort Hotel,2016,September,5,PRT,154,212.6,7,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.012712995393535764,0,42.44
-City Hotel,2016,December,21,FRA,197,43.8,5,3.0,No Deposit,Offline TA/TO,0,7,0,0,1,0,0,0,1,-0.01271538361504465,0,42.44
-Resort Hotel,2017,June,21,PRT,335,92.0,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.01281001294070816,0,42.43
-Resort Hotel,2016,June,6,PRT,108,138.0,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.013239358890920094,0,42.37
-City Hotel,2015,September,14,PRT,6,109.0,3,2.0,No Deposit,Online TA,0,7,0,0,1,0,0,0,1,-0.013412538260880513,0,42.34
-Resort Hotel,2016,February,27,NLD,44,68.14,14,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.013637610728480465,0,42.31
-Resort Hotel,2017,March,3,PRT,8,37.0,3,2.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.013903423726277842,0,42.27
-Resort Hotel,2017,June,11,PRT,1,201.0,2,4.0,No Deposit,Online TA,0,1,1,0,0,0,0,0,1,-0.014351211579135548,0,42.2
-City Hotel,2015,December,31,PRT,1,216.0,2,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.014649156001300123,0,42.16
-Resort Hotel,2017,July,11,PRT,0,228.0,1,2.0,No Deposit,Corporate,0,1,1,0,0,0,0,0,1,-0.01469732800905399,0,42.15
-Resort Hotel,2017,February,11,PRT,1,0.0,2,3.0,No Deposit,Online TA,0,1,0,0,0,0,1,0,1,-0.014956305934836434,0,42.11
-City Hotel,2016,January,7,PRT,0,77.5,1,1.0,No Deposit,Online TA,11,1,0,1,0,0,0,0,1,-0.01507601436393935,0,42.1
-City Hotel,2016,August,16,FRA,0,238.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.015048900491704376,0,42.1
-City Hotel,2016,December,1,DEU,28,75.0,4,1.0,No Deposit,Corporate,0,14,0,0,1,0,0,0,1,-0.015168199180845443,0,42.08
-Resort Hotel,2016,June,1,PRT,107,104.06,14,2.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,-0.015174522985837657,0,42.08
-Resort Hotel,2015,September,3,GBR,245,70.0,16,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.015618801235969038,0,42.02
-Resort Hotel,2016,August,5,GBR,0,199.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.01608859371125737,0,41.95
-Resort Hotel,2016,October,11,Other,214,81.0,4,2.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.01657587644525338,0,41.88
-City Hotel,2015,December,22,PRT,46,102.25,16,3.0,No Deposit,Direct,1,1,0,0,0,0,0,1,1,-0.01683752280484896,0,41.84
-Resort Hotel,2016,July,10,Other,11,4.0,15,2.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,-0.017108036648556646,0,41.8
-City Hotel,2017,May,1,PRT,12,130.0,14,1.0,No Deposit,Corporate,0,2,0,0,0,0,0,1,1,-0.01718706735402664,0,41.79
-City Hotel,2017,January,20,Other,1,0.0,1,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.017359054266666396,0,41.76
-City Hotel,2016,February,11,FRA,65,79.02,6,2.0,No Deposit,Direct,13,1,0,1,0,0,0,0,1,-0.017465977629432472,0,41.75
-City Hotel,2017,August,29,NLD,0,270.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.017440750880921674,0,41.75
-Resort Hotel,2017,July,23,IRL,354,140.64,14,2.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,-0.01749158642067894,0,41.74
-Resort Hotel,2017,August,31,PRT,2,200.0,3,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.017496696264372003,0,41.74
-Resort Hotel,2017,April,5,GBR,152,42.0,5,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.017565953788092448,0,41.73
-Resort Hotel,2017,April,5,GBR,152,42.0,5,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.017565953788092448,0,41.73
-Resort Hotel,2017,July,16,PRT,103,205.03,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.017842277808350904,0,41.69
-City Hotel,2015,August,3,PRT,7,0.0,3,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.017868547824439696,0,41.69
-Resort Hotel,2015,September,1,PRT,26,113.0,14,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.01798815919171637,0,41.67
-City Hotel,2017,April,26,Other,10,19.09,11,1.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.018199086620869,0,41.64
-Resort Hotel,2016,January,4,USA,0,48.0,7,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.018673410706760984,0,41.57
-Resort Hotel,2016,August,5,PRT,0,199.0,1,5.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.01890898428766924,0,41.53
-Resort Hotel,2017,April,6,PRT,1,0.0,1,1.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.01896185977479986,0,41.53
-Resort Hotel,2016,August,31,IRL,327,117.48,14,2.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,0,1,1,-0.019415892739390705,0,41.46
-Resort Hotel,2017,April,10,PRT,6,123.28,3,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.01949566185101681,0,41.45
-Resort Hotel,2015,August,15,PRT,77,180.0,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.01990235085169839,0,41.39
-Resort Hotel,2016,September,19,PRT,112,56.0,15,1.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.020057718237108058,0,41.36
-Resort Hotel,2017,July,3,CHE,0,0.0,3,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.020332250087618464,0,41.32
-City Hotel,2015,August,11,Other,2,15.0,2,4.0,No Deposit,Direct,0,0,0,0,0,1,0,0,1,-0.0203465163441946,0,41.32
-City Hotel,2016,February,8,PRT,0,225.0,1,5.0,No Deposit,Direct,0,2,1,0,0,0,0,0,1,-0.02102477496242533,0,41.22
-Resort Hotel,2017,April,21,PRT,64,90.0,3,2.0,No Deposit,Groups,0,7,0,0,1,0,0,0,1,-0.021241803037300944,0,41.19
-Resort Hotel,2016,April,27,NLD,99,71.89,9,2.0,No Deposit,Groups,0,9,0,0,1,0,0,0,1,-0.021272492258476827,0,41.19
-City Hotel,2017,May,10,NLD,0,285.0,1,1.0,No Deposit,Direct,0,2,1,0,0,0,0,0,1,-0.02122071475116688,0,41.19
-City Hotel,2016,May,9,BEL,11,95.0,15,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,-0.021472237140515216,0,41.16
-City Hotel,2016,September,20,PRT,0,210.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.02196066256949325,0,41.09
-City Hotel,2016,December,2,DEU,29,85.0,2,2.0,No Deposit,Corporate,0,6,0,0,1,0,0,0,1,-0.02240993297930488,0,41.02
-Resort Hotel,2015,December,31,PRT,120,127.27,3,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.022561501490108826,0,41.0
-City Hotel,2016,October,29,FRA,0,239.0,1,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.022679025619815163,0,40.98
-Resort Hotel,2015,August,1,Other,0,200.0,1,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.02275514969882636,0,40.97
-Resort Hotel,2016,July,12,NLD,0,201.0,1,1.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.02270916349859431,0,40.97
-City Hotel,2015,November,30,PRT,25,98.33,33,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.022786302118345036,0,40.96
-City Hotel,2015,October,6,Other,1,221.33,3,3.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.022829966356837372,0,40.96
-City Hotel,2015,November,30,PRT,25,98.33,33,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.022786302118345036,0,40.96
-City Hotel,2016,February,25,PRT,1,227.0,1,5.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.0229137485281819,0,40.94
-City Hotel,2015,October,6,PRT,0,0.0,1,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.022993368412639936,0,40.93
-City Hotel,2017,July,11,Other,0,215.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.023403509725462124,0,40.87
-Resort Hotel,2017,April,8,ESP,1,223.0,1,4.0,No Deposit,Online TA,0,1,1,0,0,0,0,0,1,-0.023759195198531646,0,40.82
-Resort Hotel,2016,August,4,PRT,0,205.0,1,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.023765854695993016,0,40.82
-Resort Hotel,2016,July,9,PRT,2,246.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.02385088309003275,0,40.81
-Resort Hotel,2016,September,20,IRL,285,86.4,7,3.0,No Deposit,Groups,0,7,0,0,1,0,0,0,1,-0.024184076655966613,0,40.76
-Resort Hotel,2017,June,24,ESP,15,150.0,3,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.024186024311522947,0,40.76
-Resort Hotel,2016,April,27,BEL,99,0.0,12,2.0,No Deposit,Groups,0,9,0,0,1,0,0,0,1,-0.024357076760862295,0,40.73
-City Hotel,2016,May,9,Other,3,110.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,-0.024463018732956143,0,40.72
-Resort Hotel,2017,July,17,PRT,2,287.0,4,3.0,No Deposit,Direct,0,3,1,0,0,0,0,0,1,-0.025015551322144614,0,40.64
-Resort Hotel,2016,September,5,GBR,277,95.0,15,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.024968555917360247,0,40.64
-Resort Hotel,2017,April,6,PRT,1,0.0,1,1.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.025073598192890678,0,40.63
-City Hotel,2015,December,24,PRT,1,55.0,1,2.0,No Deposit,Direct,11,0,0,1,0,0,0,0,1,-0.025361517540696932,0,40.59
-City Hotel,2015,December,24,PRT,1,55.0,1,2.0,No Deposit,Direct,11,0,0,1,0,0,0,0,1,-0.025361517540696932,0,40.59
-City Hotel,2015,December,22,Other,46,72.25,16,2.0,No Deposit,Direct,1,0,0,0,0,0,0,1,1,-0.02529828168431847,0,40.59
-City Hotel,2015,October,31,PRT,0,0.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.02568070967660807,0,40.54
-City Hotel,2015,December,11,PRT,4,0.0,1,5.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.025722035657191444,0,40.53
-City Hotel,2016,May,9,ITA,11,95.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,-0.02588222720497063,0,40.51
-City Hotel,2016,January,8,BRA,1,67.5,2,2.0,No Deposit,Online TA,11,0,0,1,0,0,0,0,1,-0.02615706048613614,0,40.47
-City Hotel,2016,February,18,PRT,0,89.0,10,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.026223598580268903,0,40.46
-City Hotel,2017,July,13,PRT,1,283.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.026272592332872213,0,40.45
-City Hotel,2017,August,16,USA,0,259.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.026475036640228156,0,40.42
-City Hotel,2015,December,30,BEL,1,205.5,4,4.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.02658433268544702,0,40.41
-City Hotel,2016,August,27,FRA,1,228.0,2,4.0,No Deposit,Direct,0,2,1,0,0,0,0,0,1,-0.026725859446725897,0,40.38
-City Hotel,2016,August,17,DEU,184,164.25,1,3.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.026806309476021917,0,40.37
-City Hotel,2016,January,8,PRT,21,52.5,30,2.0,No Deposit,Direct,1,0,0,0,0,0,0,1,1,-0.02679502601137579,0,40.37
-City Hotel,2016,January,8,PRT,21,52.5,30,2.0,No Deposit,Direct,1,0,0,0,0,0,0,1,1,-0.02679502601137579,0,40.37
-Resort Hotel,2017,July,15,GBR,0,195.0,1,2.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.02691171959129518,0,40.36
-Resort Hotel,2017,August,30,PRT,0,210.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.026883335132071418,0,40.36
-Resort Hotel,2017,July,15,GBR,0,195.0,1,2.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.02691171959129518,0,40.36
-Resort Hotel,2017,June,17,ESP,0,196.0,1,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.026887579780094595,0,40.36
-Resort Hotel,2017,July,15,GBR,0,195.0,1,2.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.02691171959129518,0,40.36
-Resort Hotel,2015,August,11,PRT,0,211.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.027160704375240763,0,40.32
-City Hotel,2016,May,9,FRA,11,95.0,15,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,-0.027333589990718166,0,40.3
-City Hotel,2016,May,9,FRA,11,95.0,15,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,-0.027333589990718166,0,40.3
-City Hotel,2016,December,28,PRT,0,198.0,1,5.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.027537665077738582,0,40.27
-City Hotel,2016,August,10,ESP,0,224.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.02753316276464085,0,40.27
-City Hotel,2016,August,16,PRT,0,283.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.02750238989371978,0,40.27
-City Hotel,2016,December,6,ITA,51,109.8,3,3.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.027595879642693555,0,40.26
-City Hotel,2017,March,6,Other,0,195.0,5,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.027651955392149985,0,40.25
-Resort Hotel,2015,November,2,PRT,31,43.2,7,2.0,No Deposit,Corporate,0,5,0,0,1,0,0,0,1,-0.02773303533010152,0,40.24
-Resort Hotel,2016,May,13,PRT,3,85.0,14,2.0,No Deposit,Corporate,0,0,0,0,0,0,0,1,1,-0.02809576460347113,0,40.18
-City Hotel,2016,March,7,Other,0,90.0,11,1.0,No Deposit,Direct,0,6,0,0,1,0,0,0,1,-0.028325218032928146,0,40.15
-Resort Hotel,2016,March,29,PRT,46,76.0,2,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.028769923662232466,0,40.08
-Resort Hotel,2017,July,24,CHE,296,169.77,5,2.0,No Deposit,Direct,0,7,0,0,1,0,0,0,1,-0.02876847540954497,0,40.08
-Resort Hotel,2017,April,24,IRL,111,89.0,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.028836508721861498,0,40.07
-Resort Hotel,2016,May,30,IRL,97,96.9,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.028997745027805888,0,40.05
-Resort Hotel,2017,August,31,PRT,2,245.33,3,2.0,No Deposit,Direct,0,2,1,0,0,0,0,0,1,-0.02908684373798731,0,40.04
-City Hotel,2017,August,11,BEL,0,250.0,1,5.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.02917648816933005,0,40.02
-Resort Hotel,2017,June,21,IRL,165,123.5,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.029322022979863027,0,40.0
-Resort Hotel,2017,August,5,IRL,0,250.0,2,3.0,No Deposit,Offline TA/TO,0,1,1,0,0,0,0,0,1,-0.0294866758819593,0,39.98
-Resort Hotel,2017,May,14,GBR,74,0.0,8,2.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.029753916163741234,0,39.94
-City Hotel,2015,July,24,PRT,0,0.0,2,3.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.029821321903379994,0,39.93
-Resort Hotel,2017,August,23,PRT,0,238.0,1,3.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.030176878729618994,0,39.88
-Resort Hotel,2017,June,10,PRT,139,173.67,6,2.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.030519298396037065,0,39.83
-City Hotel,2015,July,15,PRT,0,0.0,1,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.030676405512027438,0,39.8
-City Hotel,2017,February,1,PRT,111,98.1,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.030841633957863268,0,39.78
-City Hotel,2017,February,1,PRT,111,98.1,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.030841633957863268,0,39.78
-City Hotel,2017,February,1,PRT,111,98.1,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.030841633957863268,0,39.78
-City Hotel,2016,May,9,FRA,3,110.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,-0.03109845990036869,0,39.74
-Resort Hotel,2016,August,3,IRL,1,201.0,2,2.0,No Deposit,Direct,0,2,1,0,0,0,0,0,1,-0.031116943038305922,0,39.74
-Resort Hotel,2017,July,31,ESP,1,326.26102999999915,5,3.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.031261970027739394,0,39.72
-City Hotel,2016,December,31,PRT,2,220.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.03146649989036687,0,39.69
-Resort Hotel,2016,April,22,PRT,191,0.0,3,1.0,No Deposit,Offline TA/TO,0,2,0,0,0,0,1,0,1,-0.031432028880321594,0,39.69
-Resort Hotel,2017,January,28,ESP,47,42.5,3,4.0,No Deposit,Offline TA/TO,0,1,0,0,0,1,0,0,1,-0.03148970785735472,0,39.68
-City Hotel,2015,September,26,PRT,0,200.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.03167197287696227,0,39.66
-Resort Hotel,2017,July,25,BEL,235,0.0,14,2.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,1,0,1,-0.03181229406354735,0,39.64
-Resort Hotel,2015,October,21,FRA,292,0.0,2,1.0,No Deposit,Offline TA/TO,0,2,0,0,0,0,1,0,1,-0.032269289955236036,0,39.57
-Resort Hotel,2016,August,30,GBR,223,0.0,10,2.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,1,0,1,-0.03230563959499799,0,39.56
-Resort Hotel,2017,April,15,PRT,194,47.5,21,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.03266767877627924,0,39.51
-City Hotel,2017,August,12,FRA,0,240.0,1,2.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.03279289206407021,0,39.49
-City Hotel,2016,May,9,FRA,11,95.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,-0.03288344853925268,0,39.48
-Resort Hotel,2017,January,27,PRT,16,35.0,3,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.03296567069733758,0,39.47
-Resort Hotel,2015,October,7,DEU,139,80.23,14,2.0,No Deposit,Offline TA/TO,0,5,0,0,1,0,0,0,1,-0.03325235563297846,0,39.43
-City Hotel,2016,July,3,PRT,10,35.0,2,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.033276641204711466,0,39.42
-City Hotel,2016,May,9,PRT,11,95.0,15,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,-0.033255704689110266,0,39.42
-City Hotel,2016,May,9,PRT,11,95.0,15,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,-0.033255704689110266,0,39.42
-Resort Hotel,2015,July,6,PRT,33,157.1,10,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.03338722563155411,0,39.41
-Resort Hotel,2017,January,27,GBR,43,0.0,5,2.0,No Deposit,Online TA,0,2,0,0,0,0,1,0,1,-0.03343487413393775,0,39.4
-Resort Hotel,2017,February,12,PRT,134,26.0,14,2.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,0,1,1,-0.03428941556906007,0,39.27
-Resort Hotel,2016,July,17,PRT,104,188.14,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.03439345143829681,0,39.26
-Resort Hotel,2017,February,9,ESP,0,0.0,1,1.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.034999882696190754,0,39.17
-City Hotel,2016,May,19,PRT,0,209.0,1,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.035258117799108035,0,39.13
-Resort Hotel,2015,October,28,PRT,0,42.0,3,1.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.035322333823532726,0,39.12
-City Hotel,2015,December,29,ESP,22,199.0,5,4.0,No Deposit,Online TA,0,8,0,0,1,0,0,0,1,-0.035674954413427884,0,39.07
-Resort Hotel,2017,August,28,Other,292,166.6,8,2.0,No Deposit,Offline TA/TO,0,5,0,0,1,0,0,0,1,-0.035778735218888524,0,39.05
-City Hotel,2016,May,25,AUT,158,114.75,4,3.0,No Deposit,Online TA,0,13,0,0,1,0,0,0,1,-0.036439583341935144,0,38.96
-Resort Hotel,2016,June,14,GBR,194,93.0,17,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.03639109934445656,0,38.96
-City Hotel,2016,March,22,PRT,1,0.0,1,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.036564077005477646,0,38.94
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.03686692188936824,0,38.89
-City Hotel,2017,May,14,PRT,68,110.0,1,1.0,No Deposit,Groups,0,6,0,0,1,0,0,0,1,-0.03704535616645155,0,38.87
-City Hotel,2015,August,6,PRT,0,0.0,2,1.0,No Deposit,Online TA,0,2,0,0,0,0,1,0,1,-0.03724583609790516,0,38.84
-City Hotel,2016,January,28,PRT,1,228.0,3,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.037267015855889596,0,38.83
-City Hotel,2016,May,26,AUT,159,119.85,3,3.0,No Deposit,Online TA,0,15,0,0,1,0,0,0,1,-0.03740663815481299,0,38.81
-City Hotel,2016,May,26,AUT,159,119.85,3,3.0,No Deposit,Online TA,0,17,0,0,1,0,0,0,1,-0.03740663815481299,0,38.81
-City Hotel,2016,May,9,PRT,3,110.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,-0.03741368171709142,0,38.81
-City Hotel,2015,September,4,PRT,3,0.0,2,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.03754337774503291,0,38.79
-Resort Hotel,2015,December,30,PRT,165,84.5,4,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.037794769653210325,0,38.76
-Resort Hotel,2016,August,20,IRL,130,189.86,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.03787549937508966,0,38.75
-City Hotel,2017,August,12,DEU,0,199.0,1,1.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.038137852073533374,0,38.71
-City Hotel,2017,July,29,PRT,4,0.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.03830558363597575,0,38.68
-City Hotel,2017,March,29,FRA,1,200.0,4,2.0,No Deposit,Corporate,0,1,1,0,0,0,0,0,1,-0.038375549192362635,0,38.67
-Resort Hotel,2017,August,31,ITA,0,244.0,2,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.03910023817593655,0,38.57
-Resort Hotel,2016,July,31,USA,0,237.75,4,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.039335289357359804,0,38.53
-City Hotel,2016,August,4,GBR,0,201.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.03934732946946362,0,38.53
-City Hotel,2017,July,27,PRT,1,238.0,1,2.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.03942585123838088,0,38.52
-City Hotel,2016,June,17,Other,76,126.9,4,3.0,No Deposit,Online TA,0,6,0,0,1,0,0,0,1,-0.03952667540695726,0,38.5
-City Hotel,2016,June,17,Other,76,129.0,4,3.0,No Deposit,Online TA,0,7,0,0,1,0,0,0,1,-0.03952667540695726,0,38.5
-City Hotel,2016,July,7,PRT,0,249.3,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.03974835380218156,0,38.47
-City Hotel,2016,December,29,AUT,353,73.74,4,2.0,No Deposit,Online TA,0,6,0,0,1,0,0,0,1,-0.03978277184901513,0,38.46
-Resort Hotel,2016,February,14,PRT,3,0.0,4,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.03984584506144978,0,38.46
-City Hotel,2017,August,8,PRT,0,269.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04031056222466339,0,38.39
-Resort Hotel,2016,September,5,PRT,0,214.0,1,3.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.04041797297847466,0,38.37
-Resort Hotel,2017,August,26,PRT,0,200.0,1,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04044356938278848,0,38.37
-Resort Hotel,2017,March,29,FRA,24,12.0,7,4.0,No Deposit,Direct,0,1,0,0,0,1,0,0,1,-0.04050960697764899,0,38.36
-Resort Hotel,2015,October,2,ESP,0,0.0,2,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.040870474453999106,0,38.31
-City Hotel,2016,September,28,ITA,100,0.0,4,1.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.04103668624763196,0,38.28
-City Hotel,2017,May,10,BEL,0,285.0,1,1.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04123889874854669,0,38.25
-Resort Hotel,2015,August,29,PRT,2,173.25,6,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.041317302417546,0,38.24
-City Hotel,2017,January,16,IRL,0,93.0,2,1.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.041283858937218865,0,38.24
-City Hotel,2017,June,21,IRL,2,295.0,5,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.041603582677455675,0,38.2
-Resort Hotel,2015,September,19,FRA,239,0.0,2,1.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,1,0,1,-0.04217505990393333,0,38.11
-Resort Hotel,2017,August,11,PRT,1,295.0,2,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.042725578496423944,0,38.03
-City Hotel,2016,January,20,FRA,0,78.4,5,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.04310208214328265,0,37.98
-Resort Hotel,2016,May,1,NLD,103,47.0,8,2.0,No Deposit,Groups,0,6,0,0,1,0,0,0,1,-0.043117543795761826,0,37.97
-City Hotel,2015,October,21,PRT,0,290.0,1,2.0,No Deposit,Offline TA/TO,0,0,1,0,0,0,0,0,1,-0.04315623729615237,0,37.97
-Resort Hotel,2016,March,24,ESP,136,0.0,4,2.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.04321386073337857,0,37.96
-City Hotel,2015,December,10,DEU,6,0.0,2,1.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,1,0,1,-0.04330264516079696,0,37.95
-City Hotel,2015,December,10,DEU,6,0.0,2,1.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,1,0,1,-0.04330264516079696,0,37.95
-City Hotel,2015,December,10,DEU,6,0.0,2,1.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,1,0,1,-0.04330264516079696,0,37.95
-City Hotel,2017,March,14,Other,145,77.0,2,2.0,No Deposit,Direct,0,6,0,0,1,0,0,0,1,-0.043298647239631005,0,37.95
-City Hotel,2015,December,10,DEU,6,0.0,2,1.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,1,0,1,-0.04330264516079696,0,37.95
-City Hotel,2017,May,24,FRA,159,129.6,4,3.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.04362033772723428,0,37.9
-Resort Hotel,2016,September,9,FRA,0,216.0,1,2.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.043863120523388976,0,37.87
-City Hotel,2017,July,11,PRT,73,80.0,2,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.04382489895775771,0,37.87
-Resort Hotel,2016,June,10,PRT,94,160.5,2,3.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.04386039580334883,0,37.87
-City Hotel,2015,July,24,PRT,0,0.0,2,1.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.043910598444786675,0,37.86
-City Hotel,2017,July,14,PRT,0,215.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04413902981557155,0,37.82
-City Hotel,2016,September,14,Other,0,220.0,1,1.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04423312082174746,0,37.81
-City Hotel,2017,August,11,USA,1,290.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04449238504571251,0,37.77
-Resort Hotel,2017,January,19,PRT,8,69.0,6,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.04454292473099819,0,37.77
-Resort Hotel,2017,August,5,FRA,0,259.0,1,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04464817832685464,0,37.75
-City Hotel,2017,August,26,PRT,0,200.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04487947401898473,0,37.72
-Resort Hotel,2017,August,19,ESP,2,201.14,1,3.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.04505789576174579,0,37.69
-City Hotel,2016,September,22,PRT,0,250.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.0451244554821324,0,37.68
-City Hotel,2016,May,26,PRT,159,119.85,3,3.0,No Deposit,Online TA,0,7,0,0,1,0,0,0,1,-0.045267503446597745,0,37.66
-City Hotel,2015,July,24,PRT,0,0.0,2,1.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.04523343799051455,0,37.66
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.04539541157499549,0,37.64
-Resort Hotel,2016,September,18,GBR,242,110.8,14,2.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,0,1,1,-0.045443454943765615,0,37.63
-Resort Hotel,2015,August,19,FRA,2,252.0,2,4.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.04589941070966769,0,37.57
-Resort Hotel,2015,July,27,ESP,6,162.0,4,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.045987260811357955,0,37.55
-City Hotel,2016,January,18,PRT,27,76.72,15,1.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.046290325110347086,0,37.51
-Resort Hotel,2017,July,27,CHE,0,269.0,4,3.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.04635726455856831,0,37.5
-City Hotel,2016,April,23,Other,2,244.8,3,4.0,No Deposit,Online TA,0,1,1,0,0,0,0,0,1,-0.0464344657212693,0,37.49
-Resort Hotel,2016,July,22,PRT,104,252.6,3,4.0,No Deposit,Offline TA/TO,0,6,0,0,1,0,0,0,1,-0.046766289433025965,0,37.44
-Resort Hotel,2015,September,30,FRA,272,0.0,3,1.0,No Deposit,Offline TA/TO,0,2,0,0,0,0,1,0,1,-0.046880740133487475,0,37.42
-Resort Hotel,2017,August,29,Other,293,166.6,7,2.0,No Deposit,Offline TA/TO,0,5,0,0,1,0,0,0,1,-0.04697193735801303,0,37.41
-City Hotel,2016,August,17,DEU,184,82.13,1,2.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.04711734176501309,0,37.39
-Resort Hotel,2016,July,31,IRL,0,221.5,2,1.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.04721298374657368,0,37.37
-Resort Hotel,2017,July,5,PRT,334,123.38,5,2.0,No Deposit,Direct,0,6,0,0,1,0,0,0,1,-0.04728840660682737,0,37.36
-Resort Hotel,2017,April,13,Other,162,130.0,9,4.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.04767861017033331,0,37.3
-Resort Hotel,2015,August,5,PRT,1,247.0,3,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04771148575399686,0,37.3
-City Hotel,2017,March,24,Other,0,233.0,1,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04792402091320824,0,37.27
-Resort Hotel,2017,August,30,ESP,357,142.22,4,2.0,No Deposit,Online TA,1,6,0,0,1,0,0,0,1,-0.047984651446304705,0,37.26
-Resort Hotel,2016,April,29,NLD,101,47.0,7,2.0,No Deposit,Groups,0,9,0,0,1,0,0,0,1,-0.04801854319654919,0,37.25
-City Hotel,2015,October,10,PRT,2,196.0,3,4.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.0481980967596794,0,37.23
-Resort Hotel,2016,March,11,PRT,0,0.0,2,2.0,No Deposit,Direct,0,2,0,0,0,0,1,0,1,-0.048496233596645455,0,37.18
-Resort Hotel,2016,August,14,PRT,2,253.0,2,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.049303086760864534,0,37.07
-Resort Hotel,2016,April,29,NLD,78,54.0,7,1.0,No Deposit,Groups,0,8,0,0,1,0,0,0,1,-0.04938447291886239,0,37.05
-Resort Hotel,2016,April,29,NLD,101,54.0,7,1.0,No Deposit,Groups,0,9,0,0,1,0,0,0,1,-0.04938447291886239,0,37.05
-Resort Hotel,2015,August,20,USA,0,200.0,1,1.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.04946581969987057,0,37.04
-Resort Hotel,2017,August,5,GBR,2,216.0,2,1.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.04991851165292377,0,36.97
-Resort Hotel,2016,December,21,PRT,126,50.0,15,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.04999142961195796,0,36.96
-Resort Hotel,2016,August,26,ESP,0,261.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.050077202633873885,0,36.95
-Resort Hotel,2016,August,25,PRT,0,229.0,1,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.050123173574117996,0,36.94
-Resort Hotel,2016,December,8,PRT,86,50.2,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.050225381173631345,0,36.93
-City Hotel,2017,February,23,PRT,1,207.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.05069059569028905,0,36.86
+Resort Hotel,2017,February,10,PRT,2,0.0,14,2.0,No Deposit,Direct,0,6,0,0,1,0,1,1,3,0.031841736171207446,1,91.68
+City Hotel,2017,April,3,AGO,1,150.0,16,1.0,No Deposit,Direct,0,7,0,0,1,0,0,1,2,0.03647656280813949,1,72.41
+Resort Hotel,2016,October,7,GBR,359,66.0,14,2.0,No Deposit,Groups,0,5,0,0,1,0,0,1,2,0.032171907404744515,1,71.73
+Resort Hotel,2016,February,9,PRT,26,0.0,6,2.0,No Deposit,Direct,0,5,0,0,1,0,1,0,2,0.0023077030455760372,1,66.99
+Resort Hotel,2017,July,6,CHE,3,0.0,11,2.0,No Deposit,Direct,0,8,0,0,1,0,1,0,2,0.0013590266503087367,1,66.84
+Resort Hotel,2015,September,24,PRT,352,0.0,4,27.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.0035734675150166373,0,66.06
+Resort Hotel,2015,September,21,PRT,349,0.0,4,27.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.004531363320652293,0,65.91
+Resort Hotel,2015,October,4,PRT,338,0.0,2,55.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.005819165047664887,0,65.7
+Resort Hotel,2017,January,6,PRT,1,0.0,2,4.0,No Deposit,Direct,0,2,0,0,0,1,1,0,2,-0.008898583582695463,0,65.22
+Resort Hotel,2015,October,6,PRT,328,0.0,7,20.0,No Deposit,Direct,0,1,0,0,0,1,1,0,2,-0.014595564491137192,0,64.31
+City Hotel,2016,January,5,PRT,1,70.67,17,2.0,No Deposit,Direct,0,6,0,0,1,0,0,1,2,-0.017146482940556762,0,63.91
+Resort Hotel,2017,February,18,PRT,0,0.0,1,4.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.022066338264285335,0,63.13
+Resort Hotel,2016,February,25,GBR,0,40.0,28,1.0,No Deposit,Online TA,0,6,0,0,1,0,0,1,2,-0.024134911287201688,0,62.8
+Resort Hotel,2015,September,3,PRT,304,0.0,3,40.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.02431828113351342,0,62.77
+Resort Hotel,2016,August,2,PRT,5,0.0,1,4.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.024448949007880694,0,62.75
+Resort Hotel,2015,October,6,PRT,328,0.0,7,6.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.024531582507498872,0,62.74
+Resort Hotel,2015,October,6,PRT,328,0.0,7,5.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.024531582507498872,0,62.74
+Resort Hotel,2015,September,7,PRT,336,0.0,3,50.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.025009036903547277,0,62.66
+Resort Hotel,2015,October,12,PRT,334,0.0,7,5.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.025012147930713158,0,62.66
+Resort Hotel,2015,October,12,PRT,334,0.0,7,20.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.025012147930713158,0,62.66
+Resort Hotel,2015,October,12,PRT,334,0.0,7,10.0,No Deposit,Direct,0,0,0,0,0,1,1,0,2,-0.025012147930713158,0,62.66
+Resort Hotel,2015,September,7,ESP,30,0.0,46,2.0,No Deposit,Online TA,0,17,0,0,1,0,1,0,2,-0.030557567215476922,0,61.78
+Resort Hotel,2016,September,20,GBR,174,0.0,6,4.0,No Deposit,Online TA,0,4,0,0,0,1,1,0,2,-0.037399736344221446,0,60.7
+Resort Hotel,2015,October,26,PRT,24,0.0,30,1.0,No Deposit,Complementary,0,5,0,0,1,0,0,0,1,0.08430797005720891,1,60.0
+City Hotel,2017,August,3,PRT,2,216.5,1,3.0,No Deposit,Groups,0,10,1,0,1,0,0,0,2,-0.04198920757688224,0,59.97
+Resort Hotel,2017,July,25,FRA,149,0.0,29,2.0,No Deposit,Online TA,0,13,0,0,1,0,1,0,2,-0.04268037678447978,0,59.86
+Resort Hotel,2017,July,27,ESP,45,0.0,7,4.0,No Deposit,Online TA,0,1,0,0,0,1,1,0,2,-0.04290429782750549,0,59.82
+Resort Hotel,2017,January,13,PRT,1,0.0,1,4.0,No Deposit,Online TA,0,1,0,0,0,1,1,0,2,-0.047346062805506295,0,59.12
+Resort Hotel,2015,September,26,PRT,354,0.0,7,26.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,1,0,2,-0.05036527464545604,0,58.64
+Resort Hotel,2015,September,19,PRT,347,0.0,7,26.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,1,0,2,-0.05236874488166776,0,58.32
+Resort Hotel,2015,September,5,PRT,333,0.0,7,26.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,1,0,2,-0.05270381798189888,0,58.27
+Resort Hotel,2015,October,3,PRT,361,0.0,7,26.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,1,0,2,-0.05549136567418378,0,57.83
+City Hotel,2016,July,23,PRT,206,0.0,48,2.0,No Deposit,Online TA,0,6,0,0,1,0,1,0,2,-0.055625786251732035,0,57.8
+Resort Hotel,2015,September,12,PRT,340,0.0,7,26.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,1,0,2,-0.05632299365563265,0,57.69
+City Hotel,2017,April,21,PRT,4,0.0,2,4.0,No Deposit,Complementary,0,1,0,0,0,1,0,0,1,0.06634137070861768,1,57.15
+Resort Hotel,2016,May,11,GBR,5,0.0,5,4.0,No Deposit,Corporate,0,1,0,0,0,1,0,0,1,0.056022888170243146,1,55.51
+Resort Hotel,2017,January,28,PRT,17,51.0,1,4.0,Non Refund,Groups,0,0,0,0,0,1,0,0,1,0.04860530187594159,1,54.34
+Resort Hotel,2017,May,25,GBR,203,106.0,7,4.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.048565053824965565,1,54.33
+Resort Hotel,2015,November,2,AUS,31,52.2,15,2.0,No Deposit,Corporate,0,5,0,0,1,0,0,0,1,0.04609729072941693,1,53.94
+City Hotel,2015,December,30,PRT,2,268.17,3,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,0.04486406284339961,1,53.74
+City Hotel,2017,March,7,ITA,1,95.0,14,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,0.04483774722784373,1,53.74
+Resort Hotel,2015,August,26,CN,83,0.0,5,2.0,No Deposit,Online TA,0,5,0,0,1,0,1,0,2,-0.08225006124999124,0,53.58
+Resort Hotel,2015,August,22,PRT,112,244.0,14,4.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.03829309398712666,1,52.7
+Resort Hotel,2015,September,27,PRT,81,66.43,14,1.0,No Deposit,Direct,1,2,0,0,0,0,0,1,1,0.03711952324146617,1,52.52
+City Hotel,2017,June,14,GRC,2,110.0,14,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,0.03582914413327054,1,52.31
+Resort Hotel,2017,January,22,POL,0,49.1,1,4.0,No Deposit,Direct,0,0,0,0,0,1,0,0,1,0.03333674704746192,1,51.92
+City Hotel,2017,June,14,PRT,7,0.0,1,4.0,No Deposit,Complementary,0,1,0,0,0,1,0,0,1,0.032025994258430335,1,51.71
+Resort Hotel,2017,February,3,GBR,1,42.11,45,1.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.031946547167981065,1,51.69
+City Hotel,2016,May,13,PRT,4,0.0,1,4.0,No Deposit,Complementary,0,2,0,0,0,1,0,0,1,0.029685067368190543,1,51.34
+Resort Hotel,2017,July,9,PRT,108,143.5,14,2.0,No Deposit,Direct,1,1,0,0,0,0,0,1,1,0.02680332717793643,1,50.88
+City Hotel,2016,October,19,JPN,2,170.0,23,1.0,No Deposit,Corporate,0,4,0,0,0,0,0,1,1,0.02656545585211445,1,50.84
+Resort Hotel,2017,March,15,GBR,120,45.0,3,1.0,No Deposit,Corporate,0,6,0,0,1,0,0,0,1,0.026426202506318996,1,50.82
+City Hotel,2015,October,4,BRA,5,95.0,19,1.0,No Deposit,Corporate,0,0,0,0,0,0,0,1,1,0.025011023094022033,1,50.59
+City Hotel,2016,January,30,PRT,0,42.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,0.024630141207461986,1,50.53
+Resort Hotel,2015,November,3,CZE,24,40.0,13,1.0,No Deposit,Corporate,0,5,0,0,1,0,0,0,1,0.024439655537681793,1,50.5
+Resort Hotel,2016,September,16,CZE,27,165.0,14,4.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.023897349718615568,1,50.42
+City Hotel,2017,March,31,BEL,3,110.0,14,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,0.023760681377317683,1,50.4
+City Hotel,2017,August,29,GBR,0,270.0,1,5.0,No Deposit,Offline TA/TO,0,3,1,0,0,0,0,0,1,0.02105670786163827,1,49.97
+Resort Hotel,2016,April,22,PRT,35,81.5,3,3.0,No Deposit,Corporate,0,5,0,0,1,0,0,0,1,0.019944959513073734,1,49.79
+Resort Hotel,2015,November,3,ITA,24,40.0,13,1.0,No Deposit,Corporate,0,6,0,0,1,0,0,0,1,0.019273458954099043,1,49.68
+Resort Hotel,2015,October,26,PRT,27,36.0,19,1.0,No Deposit,Corporate,0,0,0,0,0,0,0,1,1,0.019134605664693605,1,49.66
+Resort Hotel,2017,July,26,IRL,328,126.66,14,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,0.019007443325408824,1,49.64
+City Hotel,2016,May,9,FRA,11,95.0,15,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,0.018919455460077783,1,49.63
+City Hotel,2016,May,9,FRA,11,95.0,15,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,0.018919455460077783,1,49.63
+Resort Hotel,2017,January,19,POL,0,49.1,3,4.0,No Deposit,Direct,0,3,0,0,0,1,0,0,1,0.01883442841978067,1,49.61
+City Hotel,2016,November,14,PRT,3,93.0,34,2.0,No Deposit,Corporate,0,3,0,0,0,0,0,1,1,0.017869030844056666,1,49.46
+Resort Hotel,2017,August,6,PRT,250,251.43,14,3.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.017884232259485544,1,49.46
+Resort Hotel,2015,August,15,PRT,29,140.0,12,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.01745566648789154,1,49.4
+City Hotel,2016,May,9,ITA,11,95.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,0.01657888159807097,1,49.26
+Resort Hotel,2015,August,15,PRT,148,160.0,8,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.01610256210758565,1,49.18
+City Hotel,2015,December,17,PRT,15,0.0,2,5.0,No Deposit,Complementary,0,1,0,0,0,1,0,0,1,0.0159632673384269,1,49.16
+City Hotel,2017,May,1,PRT,12,130.0,14,1.0,No Deposit,Corporate,0,2,0,0,0,0,0,1,1,0.01564520295884342,1,49.11
+City Hotel,2016,May,9,BEL,11,95.0,15,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,0.01490157597338293,1,48.99
+City Hotel,2016,May,9,IRL,3,110.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,0.013819395523235634,1,48.82
+Resort Hotel,2016,April,23,ESP,26,121.0,7,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.013781047245863376,1,48.81
+City Hotel,2017,August,17,ITA,288,44.0,4,4.0,No Deposit,Direct,0,3,0,0,0,1,0,0,1,0.013733897913679072,1,48.81
+City Hotel,2016,May,9,HRV,3,110.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,0.01308487672971892,1,48.7
+City Hotel,2016,March,1,JPN,1,92.5,14,1.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.012696072579610918,1,48.64
+City Hotel,2016,May,9,FRA,3,110.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,0.012014962089909265,1,48.53
+City Hotel,2015,December,11,PRT,11,0.0,2,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,0.011887262632362727,1,48.51
+City Hotel,2016,August,9,PRT,165,106.0,24,1.0,No Deposit,Corporate,0,4,0,0,0,0,0,1,1,0.011789417022754267,1,48.5
+Resort Hotel,2016,February,20,PRT,1,0.0,1,4.0,No Deposit,Complementary,0,1,0,0,0,1,0,0,1,0.011469582724475735,1,48.45
+Resort Hotel,2015,July,18,PRT,0,249.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,0.01120591471995891,1,48.4
+Resort Hotel,2016,June,25,PRT,101,274.0,2,4.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.011028005279856812,1,48.38
+City Hotel,2016,May,9,FRA,11,95.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,0.010757666597861704,1,48.33
+City Hotel,2016,October,2,PRT,3,0.0,14,1.0,No Deposit,Complementary,0,3,0,0,0,0,0,1,1,0.009408267891296895,1,48.12
+Resort Hotel,2017,April,4,USA,151,42.0,5,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.009336445714185015,1,48.11
+Resort Hotel,2016,April,25,PRT,13,77.0,33,2.0,No Deposit,Corporate,0,0,0,0,0,0,0,1,1,0.009228670042071618,1,48.09
+Resort Hotel,2015,November,2,PRT,31,43.2,7,2.0,No Deposit,Corporate,0,5,0,0,1,0,0,0,1,0.009148691150343002,1,48.08
+City Hotel,2017,July,24,PRT,14,0.0,2,3.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,0.009180320906864825,1,48.08
+Resort Hotel,2017,June,21,IRL,165,138.5,14,3.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.009065486486803387,1,48.07
+Resort Hotel,2016,February,25,GBR,709,68.0,28,2.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.008738100170708973,1,48.01
+Resort Hotel,2016,July,5,Unknown,126,110.0,69,1.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.008581733629031696,1,47.99
+Resort Hotel,2016,May,25,GBR,224,40.0,5,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.007819057824584807,1,47.87
+City Hotel,2017,May,19,AGO,0,305.0,1,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,0.0077450224968005354,1,47.86
+Resort Hotel,2016,January,14,PRT,3,38.0,11,1.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.0069726729145782596,1,47.73
+Resort Hotel,2017,August,18,PRT,33,310.0,3,4.0,No Deposit,Online TA,0,8,0,0,1,0,0,0,1,0.006081610135798887,1,47.59
+City Hotel,2016,May,9,PRT,11,95.0,15,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,0.005783867322810443,1,47.54
+City Hotel,2016,May,9,PRT,11,95.0,15,1.0,No Deposit,Aviation,0,1,0,0,0,0,0,1,1,0.005783867322810443,1,47.54
+Resort Hotel,2016,July,16,PRT,144,108.4,15,1.0,No Deposit,Direct,2,1,0,0,0,0,0,1,1,0.005502500620281681,1,47.5
+Resort Hotel,2015,July,4,PRT,183,130.0,14,3.0,No Deposit,Direct,1,0,0,0,0,0,0,1,1,0.004741875312735067,1,47.38
+Resort Hotel,2016,August,1,DEU,0,231.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,0.004135301553515713,1,47.28
+Resort Hotel,2015,July,1,Unknown,118,62.0,14,1.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,0.003405391859410689,1,47.17
+Resort Hotel,2015,July,4,PRT,32,0.0,1,4.0,No Deposit,Complementary,0,2,0,0,0,1,0,0,1,0.0033602435943923536,1,47.16
+Resort Hotel,2015,August,1,Unknown,113,110.5,60,1.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,0.003303921194171666,1,47.15
+Resort Hotel,2017,August,18,PRT,33,270.0,3,2.0,No Deposit,Online TA,0,10,0,0,1,0,0,0,1,0.0031159695348246252,1,47.12
+Resort Hotel,2017,July,13,GBR,20,0.0,12,2.0,No Deposit,Complementary,0,7,0,0,1,0,0,0,1,0.0031239822667780137,1,47.12
+Resort Hotel,2017,April,5,GBR,152,42.0,5,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.0026704929439356206,1,47.05
+Resort Hotel,2017,April,5,GBR,152,42.0,5,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.0026704929439356206,1,47.05
+Resort Hotel,2017,July,24,ESP,5,0.0,8,1.0,No Deposit,Direct,0,3,0,0,0,0,1,0,1,0.0023945591261173016,1,47.01
+Resort Hotel,2017,March,3,PRT,8,37.0,3,2.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.0012758146987111862,1,46.83
+Resort Hotel,2016,September,5,PRT,154,212.6,7,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,0.001115179171997327,1,46.8
+Resort Hotel,2016,December,20,BRA,99,0.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,0.0006770087535824532,1,46.73
+Resort Hotel,2016,September,14,GBR,335,66.0,5,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,0.0003640477250832497,1,46.69
+Resort Hotel,2016,May,13,PRT,3,85.0,14,2.0,No Deposit,Corporate,0,0,0,0,0,0,0,1,1,-0.00022051415152690712,0,46.59
+Resort Hotel,2017,August,7,MAR,1,245.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.0004579956127589435,0,46.55
+Resort Hotel,2016,November,16,IRL,4,33.26,17,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.0009724192934842391,0,46.47
+Resort Hotel,2017,August,15,ESP,43,337.0,5,4.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.0010452148476581824,0,46.46
+City Hotel,2016,March,2,GNB,0,75.65,21,1.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,-0.0012680311454345006,0,46.43
+City Hotel,2016,February,25,PRT,1,227.0,1,5.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.0012564627112502391,0,46.43
+City Hotel,2016,July,16,FRA,1,0.0,13,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.0015299769825920517,0,46.38
+City Hotel,2016,May,9,PRT,3,110.0,15,1.0,No Deposit,Aviation,0,0,0,0,0,0,0,1,1,-0.0017230871596342068,0,46.35
+City Hotel,2017,June,19,PRT,3,0.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.0019799650793349555,0,46.31
+City Hotel,2015,September,14,PRT,6,109.0,3,2.0,No Deposit,Online TA,0,7,0,0,1,0,0,0,1,-0.002602194744898978,0,46.21
+Resort Hotel,2016,January,15,CHN,0,0.0,3,3.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.002851395353147157,0,46.18
+Resort Hotel,2015,September,6,DEU,152,81.82,22,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.002934147448697022,0,46.16
+Resort Hotel,2017,April,21,PRT,64,90.0,3,2.0,No Deposit,Groups,0,7,0,0,1,0,0,0,1,-0.002967054656198065,0,46.16
+Resort Hotel,2015,July,1,Unknown,118,80.0,14,2.0,No Deposit,Direct,0,3,0,0,0,0,0,1,1,-0.0032283731419243678,0,46.12
+Resort Hotel,2016,December,30,PRT,31,340.0,2,2.0,No Deposit,Groups,0,6,0,0,1,0,0,0,1,-0.0032539525987173024,0,46.11
+Resort Hotel,2016,October,11,ITA,214,81.0,9,2.0,No Deposit,Groups,0,7,0,0,1,0,0,0,1,-0.0035920562421571933,0,46.06
+Resort Hotel,2017,March,1,Unknown,0,0.0,1,1.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.004007669735916153,0,45.99
+Resort Hotel,2016,July,18,AUS,0,210.0,1,5.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.004743847786613076,0,45.87
+City Hotel,2016,January,18,PRT,0,40.0,1,1.0,No Deposit,Corporate,3,0,0,1,0,0,0,0,1,-0.004865284074387022,0,45.86
+City Hotel,2016,August,31,PRT,121,0.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.005529258395913894,0,45.75
+City Hotel,2017,August,11,BEL,0,250.0,1,5.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.005528765125759727,0,45.75
+Resort Hotel,2016,September,5,DEU,228,88.0,21,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.006512046817109374,0,45.59
+City Hotel,2017,August,29,NLD,0,270.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.006865027770261656,0,45.54
+Resort Hotel,2017,March,12,GBR,96,65.09,11,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.006901379949447728,0,45.53
+Resort Hotel,2017,July,1,PRT,74,115.0,30,1.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.006994006270268915,0,45.52
+City Hotel,2016,January,10,PRT,4,75.0,20,2.0,No Deposit,Direct,1,0,0,0,0,0,0,1,1,-0.007274359650333073,0,45.47
+Resort Hotel,2017,March,8,BEL,172,0.0,5,2.0,No Deposit,Direct,0,3,0,0,0,0,1,0,1,-0.00735696912181294,0,45.46
+Resort Hotel,2017,April,5,GBR,152,48.0,4,2.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.007660199413977442,0,45.41
+City Hotel,2015,December,31,PRT,1,216.0,2,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.007774980010953003,0,45.39
+City Hotel,2017,February,24,PRT,2,0.0,1,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.00780075781495837,0,45.39
+Resort Hotel,2017,June,9,PRT,178,134.0,15,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.007859475804572469,0,45.38
+Resort Hotel,2016,July,14,PRT,127,227.0,7,4.0,No Deposit,Direct,0,6,0,0,1,0,0,0,1,-0.008198632077942136,0,45.33
+Resort Hotel,2016,May,1,NLD,103,72.0,7,4.0,No Deposit,Groups,0,7,0,0,1,0,0,0,1,-0.008248493227671516,0,45.32
+Resort Hotel,2016,August,18,FRA,1,242.0,1,3.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.008275167142477224,0,45.31
+City Hotel,2015,August,3,PRT,7,0.0,3,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.008471810932337176,0,45.28
+City Hotel,2017,August,16,USA,0,259.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.008674335569764047,0,45.25
+Resort Hotel,2015,August,27,BEL,34,150.86,14,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.008753035405475118,0,45.24
+City Hotel,2017,May,14,PRT,68,110.0,1,1.0,No Deposit,Groups,0,6,0,0,1,0,0,0,1,-0.008971085799223899,0,45.2
+Resort Hotel,2017,April,5,GBR,152,48.0,5,2.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.009189290099778091,0,45.17
+Resort Hotel,2017,August,27,CHE,0,220.5,1,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.00952831082015626,0,45.12
+City Hotel,2016,December,21,FRA,197,43.8,5,3.0,No Deposit,Offline TA/TO,0,7,0,0,1,0,0,0,1,-0.009804683111065526,0,45.07
+City Hotel,2017,March,29,FRA,1,200.0,4,2.0,No Deposit,Corporate,0,1,1,0,0,0,0,0,1,-0.00983726042393751,0,45.07
+Resort Hotel,2016,February,16,PRT,8,45.0,14,1.0,No Deposit,Online TA,0,1,0,0,0,0,0,1,1,-0.009824264060858234,0,45.07
+City Hotel,2016,December,28,PRT,0,198.0,1,5.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.009968598089839298,0,45.05
+City Hotel,2017,April,26,AGO,10,19.09,11,1.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.010217207227992131,0,45.01
+Resort Hotel,2015,October,10,BEL,78,106.0,21,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.01052651588156217,0,44.96
+Resort Hotel,2017,April,5,GBR,152,67.0,5,2.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.010737290570725033,0,44.92
+City Hotel,2016,June,19,PRT,0,199.0,1,3.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.010825912502465673,0,44.91
+Resort Hotel,2016,April,10,GBR,275,11.53,17,2.0,No Deposit,Groups,0,6,0,0,1,0,0,0,1,-0.0108911107819748,0,44.9
+City Hotel,2016,February,8,PRT,0,225.0,1,5.0,No Deposit,Direct,0,2,1,0,0,0,0,0,1,-0.01153550400490344,0,44.8
+Resort Hotel,2016,September,8,CHE,2,199.0,1,3.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.013444904186748152,0,44.49
+Resort Hotel,2016,July,9,PRT,2,246.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.013589491223812034,0,44.47
+Resort Hotel,2015,July,14,PRT,113,187.5,15,3.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.014084006981602948,0,44.39
+Resort Hotel,2017,April,26,PRT,11,161.08,4,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.01417602534755269,0,44.38
+Resort Hotel,2016,August,5,GBR,0,199.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.014419204558448029,0,44.34
+Resort Hotel,2015,July,16,PRT,21,160.0,14,1.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.014448246296595024,0,44.34
+Resort Hotel,2017,July,30,PRT,95,310.75,5,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.014569697829330264,0,44.32
+City Hotel,2017,February,16,ESP,2,198.0,3,3.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.014718277190356122,0,44.29
+Resort Hotel,2017,July,23,IRL,354,140.64,14,2.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,-0.015460786122750592,0,44.17
+City Hotel,2017,March,6,AGO,0,195.0,5,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.015883228528011273,0,44.11
+Resort Hotel,2017,February,4,DEU,109,0.0,9,3.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.016222548070920495,0,44.05
+Resort Hotel,2016,October,11,RUS,214,81.0,4,2.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.01629312845334252,0,44.04
+City Hotel,2015,December,22,PRT,46,102.25,16,3.0,No Deposit,Direct,1,1,0,0,0,0,0,1,1,-0.01642624158462469,0,44.02
+Resort Hotel,2017,June,24,ESP,15,150.0,3,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.016673703319562305,0,43.98
+Resort Hotel,2017,February,23,GBR,337,46.4,28,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.016705501613502927,0,43.98
+City Hotel,2016,February,11,FRA,65,79.02,6,2.0,No Deposit,Direct,13,1,0,1,0,0,0,0,1,-0.0168381104677906,0,43.96
+Resort Hotel,2017,March,5,GBR,80,0.26,38,2.0,No Deposit,Groups,0,10,0,0,1,0,0,0,1,-0.017132445749324043,0,43.91
+Resort Hotel,2017,July,11,PRT,0,228.0,1,2.0,No Deposit,Corporate,0,1,1,0,0,0,0,0,1,-0.017146896771479514,0,43.91
+Resort Hotel,2016,February,27,NLD,44,68.14,14,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.017594926812395828,0,43.84
+Resort Hotel,2016,February,3,PRT,46,30.0,26,1.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.01783689358566476,0,43.8
+City Hotel,2017,July,11,CHN,0,215.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.017888262439276548,0,43.79
+Resort Hotel,2016,February,3,PRT,46,38.0,26,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.018029011135891504,0,43.77
+Resort Hotel,2016,June,1,PRT,99,119.76,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.018100251259041356,0,43.76
+City Hotel,2015,December,22,AGO,46,72.25,16,2.0,No Deposit,Direct,1,0,0,0,0,0,0,1,1,-0.018503219422311257,0,43.69
+City Hotel,2017,January,20,AGO,1,0.0,1,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.01871876296548347,0,43.66
+Resort Hotel,2015,September,3,GBR,245,70.0,16,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.01893492869967217,0,43.62
+Resort Hotel,2017,June,21,ITA,82,159.0,14,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.019030726283075117,0,43.61
+Resort Hotel,2016,July,9,Unknown,131,0.0,9,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.019182115542632383,0,43.58
+Resort Hotel,2016,March,19,PRT,57,20.0,2,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.019554374693427468,0,43.53
+Resort Hotel,2016,August,1,PRT,1,282.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.01949902630175082,0,43.53
+City Hotel,2015,December,19,PRT,0,0.0,1,3.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.019708703180614795,0,43.5
+City Hotel,2016,December,31,PRT,2,220.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.01992215559046806,0,43.47
+Resort Hotel,2015,September,15,PRT,222,38.0,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.019940940749989644,0,43.46
+City Hotel,2015,December,11,PRT,4,0.0,1,5.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.02006046963682795,0,43.45
+City Hotel,2016,October,29,FRA,0,239.0,1,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.020098214561327876,0,43.44
+Resort Hotel,2015,August,14,PRT,4,16.0,1,4.0,No Deposit,Direct,1,1,0,0,0,1,0,0,1,-0.02022695485776782,0,43.42
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2016,September,17,BEL,204,102.86,21,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.020264744912862287,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,September,15,PRT,222,49.95,6,2.0,Non Refund,Groups,25,0,0,1,0,0,0,0,1,-0.020279270894568657,0,43.41
+Resort Hotel,2015,July,15,PRT,1,508.0,1,2.0,No Deposit,Corporate,0,0,1,0,0,0,0,0,1,-0.020438147900756376,0,43.39
+Resort Hotel,2015,August,14,CHE,0,203.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.021275517621082318,0,43.25
+City Hotel,2017,July,29,PRT,4,0.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.021356013964750786,0,43.24
+Resort Hotel,2017,August,31,PRT,2,200.0,3,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.021497817181956425,0,43.22
+Resort Hotel,2016,May,30,IRL,97,96.9,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.021685917841004043,0,43.19
+Resort Hotel,2017,June,21,PRT,335,92.0,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.02176035519749009,0,43.18
+Resort Hotel,2016,July,10,Unknown,11,4.0,15,2.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,-0.022103778442685185,0,43.12
+City Hotel,2016,July,3,PRT,10,35.0,2,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.02216083445317868,0,43.11
+Resort Hotel,2017,January,27,PRT,16,35.0,3,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.022398173580840397,0,43.07
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+Resort Hotel,2015,July,15,PRT,166,121.5,2,2.0,Non Refund,Groups,24,0,0,1,0,0,0,0,1,-0.023519787709402717,0,42.9
+City Hotel,2015,December,29,ESP,22,199.0,5,4.0,No Deposit,Online TA,0,8,0,0,1,0,0,0,1,-0.023541978007969366,0,42.89
+City Hotel,2017,February,1,PRT,111,98.1,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.023913105599115025,0,42.83
+City Hotel,2017,February,1,PRT,111,98.1,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.023913105599115025,0,42.83
+City Hotel,2017,February,1,PRT,111,98.1,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.023913105599115025,0,42.83
+Resort Hotel,2016,August,5,PRT,0,199.0,1,5.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.024061595377536826,0,42.81
+City Hotel,2015,August,11,DNK,2,15.0,2,4.0,No Deposit,Direct,0,0,0,0,0,1,0,0,1,-0.024171903840664866,0,42.79
+Resort Hotel,2016,August,31,IRL,327,117.48,14,2.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,0,1,1,-0.024304477947375558,0,42.77
+Resort Hotel,2015,July,16,PRT,0,198.0,2,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.024356977779075473,0,42.76
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2015,September,24,BEL,265,89.2,4,2.0,Non Refund,Groups,14,0,0,1,0,0,0,0,1,-0.024549879978736477,0,42.73
+Resort Hotel,2017,May,7,GBR,275,0.0,15,2.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.02468151613270292,0,42.71
+Resort Hotel,2017,March,29,FRA,24,12.0,7,4.0,No Deposit,Direct,0,1,0,0,0,1,0,0,1,-0.025086977460598625,0,42.65
+City Hotel,2015,July,24,PRT,0,0.0,2,3.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.025471205822689857,0,42.59
+City Hotel,2017,June,20,ITA,74,318.5,2,5.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.025830137529193498,0,42.53
+Resort Hotel,2015,December,30,PRT,165,84.5,4,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.026491905103072255,0,42.43
+City Hotel,2015,November,30,PRT,25,98.33,33,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.026642921172117584,0,42.4
+City Hotel,2015,November,30,PRT,25,98.33,33,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.026642921172117584,0,42.4
+City Hotel,2017,July,27,PRT,1,238.0,1,2.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.02671386710688811,0,42.39
+City Hotel,2015,July,15,PRT,0,0.0,7,2.0,No Deposit,Direct,0,4,0,0,0,0,1,0,1,-0.027124717770217466,0,42.32
+City Hotel,2016,April,18,FRA,4,0.0,1,1.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,1,0,1,-0.027173709591326867,0,42.32
+Resort Hotel,2016,April,22,PRT,191,0.0,3,1.0,No Deposit,Offline TA/TO,0,2,0,0,0,0,1,0,1,-0.028281361878111422,0,42.14
+City Hotel,2016,January,20,FRA,0,78.4,5,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.0287336638556121,0,42.07
+City Hotel,2017,May,24,FRA,159,129.6,4,3.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.028874818304082006,0,42.05
+Resort Hotel,2016,January,4,USA,0,48.0,7,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.028843198688721594,0,42.05
+Resort Hotel,2017,April,10,PRT,6,123.28,3,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.02892773321800335,0,42.04
+Resort Hotel,2016,August,4,PRT,0,205.0,1,4.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.029000030724125936,0,42.03
+Resort Hotel,2017,August,6,PRT,250,201.43,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.030783202642847673,0,41.74
+City Hotel,2016,March,7,GNB,0,90.0,11,1.0,No Deposit,Direct,0,6,0,0,1,0,0,0,1,-0.030914180478810616,0,41.72
+City Hotel,2017,August,11,USA,1,290.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.030975475138413977,0,41.71
+City Hotel,2015,September,4,PRT,3,0.0,2,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.03114331739677284,0,41.69
+Resort Hotel,2017,January,24,GBR,88,41.47,35,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.031161517827673124,0,41.68
+City Hotel,2017,June,21,IRL,2,295.0,5,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.031334018731257074,0,41.66
+Resort Hotel,2016,September,5,GBR,277,95.0,15,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.0314056687332373,0,41.65
+City Hotel,2017,July,13,PRT,1,283.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.03137034790799348,0,41.65
+City Hotel,2016,March,22,PRT,1,0.0,1,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.03152793583265179,0,41.63
+Resort Hotel,2017,April,13,NOR,162,130.0,9,4.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.03181406972393269,0,41.58
+Resort Hotel,2016,April,29,NLD,101,54.0,7,1.0,No Deposit,Groups,0,9,0,0,1,0,0,0,1,-0.0319171595485121,0,41.56
+Resort Hotel,2016,June,1,PRT,107,90.08,14,2.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,-0.03209680177255686,0,41.54
+Resort Hotel,2016,August,31,ESP,2,202.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.03226997140343074,0,41.51
+Resort Hotel,2016,June,1,PRT,107,104.06,14,2.0,No Deposit,Direct,0,2,0,0,0,0,0,1,1,-0.03258381010529504,0,41.46
+Resort Hotel,2016,April,29,NLD,78,54.0,7,1.0,No Deposit,Groups,0,8,0,0,1,0,0,0,1,-0.03260473086941168,0,41.46
+City Hotel,2016,January,8,BRA,1,67.5,2,2.0,No Deposit,Online TA,11,0,0,1,0,0,0,0,1,-0.0328723739827575,0,41.41
+Resort Hotel,2017,February,19,PRT,31,50.0,1,4.0,No Deposit,Online TA,0,2,0,0,0,1,0,0,1,-0.03303376976461864,0,41.39
+Resort Hotel,2017,January,28,ESP,47,42.5,3,4.0,No Deposit,Offline TA/TO,0,1,0,0,0,1,0,0,1,-0.03299784846362147,0,41.39
+City Hotel,2015,December,24,PRT,1,55.0,1,2.0,No Deposit,Direct,11,0,0,1,0,0,0,0,1,-0.033501576302842395,0,41.31
+City Hotel,2015,December,24,PRT,1,55.0,1,2.0,No Deposit,Direct,11,0,0,1,0,0,0,0,1,-0.033501576302842395,0,41.31
+City Hotel,2016,July,7,PRT,0,249.3,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.033605974008617256,0,41.3
+City Hotel,2016,January,8,BRA,1,76.5,2,2.0,No Deposit,Online TA,11,0,0,1,0,0,0,0,1,-0.03418208780770571,0,41.21
+City Hotel,2016,August,4,GBR,0,201.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.034544372216671226,0,41.15
+Resort Hotel,2015,December,31,PRT,120,127.27,3,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.03450647214627284,0,41.15
+City Hotel,2016,April,29,RUS,0,197.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.03506152211126318,0,41.07
+City Hotel,2016,August,16,PRT,0,283.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.0350537868479045,0,41.07
+City Hotel,2015,August,6,PRT,0,0.0,2,1.0,No Deposit,Online TA,0,2,0,0,0,0,1,0,1,-0.035568492833980225,0,40.99
+Resort Hotel,2017,August,5,IRL,0,250.0,2,3.0,No Deposit,Offline TA/TO,0,1,1,0,0,0,0,0,1,-0.03558741446715474,0,40.98
+Resort Hotel,2017,July,24,CHE,296,169.77,5,2.0,No Deposit,Direct,0,7,0,0,1,0,0,0,1,-0.03585374464164326,0,40.94
+City Hotel,2016,September,22,PRT,0,250.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.0359040010554178,0,40.93
+City Hotel,2016,January,8,PRT,21,52.5,30,2.0,No Deposit,Direct,1,0,0,0,0,0,0,1,1,-0.036333470308078486,0,40.86
+City Hotel,2016,January,8,PRT,21,52.5,30,2.0,No Deposit,Direct,1,0,0,0,0,0,0,1,1,-0.036333470308078486,0,40.86
+City Hotel,2016,August,17,DEU,184,164.25,1,3.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.036463459367805595,0,40.84
+Resort Hotel,2017,April,8,ESP,1,223.0,1,4.0,No Deposit,Online TA,0,1,1,0,0,0,0,0,1,-0.03665564616454081,0,40.81
+City Hotel,2017,July,14,PRT,0,215.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.03680969340118179,0,40.79
+Resort Hotel,2017,June,10,PRT,139,173.67,6,2.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.03687643021476639,0,40.78
+Resort Hotel,2017,January,15,PRT,5,0.0,1,3.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.03697627558207711,0,40.76
+Resort Hotel,2017,February,12,PRT,134,26.0,14,2.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,0,1,1,-0.037312498585086507,0,40.71
+Resort Hotel,2015,August,15,PRT,77,180.0,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.03727706052287788,0,40.71
+Resort Hotel,2016,December,27,PRT,12,0.0,4,2.0,No Deposit,Direct,0,3,0,0,0,0,1,0,1,-0.0377008638743096,0,40.65
+City Hotel,2017,May,10,NLD,0,285.0,1,1.0,No Deposit,Direct,0,2,1,0,0,0,0,0,1,-0.03766447337681422,0,40.65
+Resort Hotel,2015,September,1,PRT,26,113.0,14,2.0,No Deposit,Direct,0,1,0,0,0,0,0,1,1,-0.03790582893389782,0,40.61
+City Hotel,2017,January,16,IRL,0,93.0,2,1.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.03807140560310612,0,40.59
+Resort Hotel,2017,June,21,IRL,165,123.5,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.038441268544386065,0,40.53
+Resort Hotel,2015,July,27,ESP,6,162.0,4,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.03847422758239499,0,40.52
+City Hotel,2017,August,8,PRT,0,269.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.038816287207017186,0,40.47
+City Hotel,2017,July,10,FRA,65,18.0,2,4.0,No Deposit,Direct,0,1,0,0,0,1,0,0,1,-0.038964876997637454,0,40.45
+Resort Hotel,2016,August,28,PRT,10,213.0,5,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.039004734976739064,0,40.44
+Resort Hotel,2017,August,23,PRT,0,238.0,1,3.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.038999019027495585,0,40.44
+Resort Hotel,2017,August,30,PRT,0,210.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.039644132291971446,0,40.34
+Resort Hotel,2015,October,7,DEU,139,80.23,14,2.0,No Deposit,Offline TA/TO,0,5,0,0,1,0,0,0,1,-0.03983393856990841,0,40.31
+Resort Hotel,2016,September,19,PRT,112,56.0,15,1.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.03997807218174371,0,40.29
+City Hotel,2017,August,12,FRA,0,240.0,1,2.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.04102985580671198,0,40.12
+Resort Hotel,2016,July,31,USA,0,237.75,4,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.041236636199614485,0,40.09
+City Hotel,2016,December,1,DEU,28,75.0,4,1.0,No Deposit,Corporate,0,14,0,0,1,0,0,0,1,-0.04137574191207943,0,40.06
+City Hotel,2017,August,26,PRT,0,200.0,1,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04145344399712564,0,40.05
+City Hotel,2017,January,2,GBR,0,0.0,2,1.0,No Deposit,Online TA,0,2,0,0,0,0,1,0,1,-0.04158801846177884,0,40.03
+Resort Hotel,2016,June,6,PRT,108,138.0,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.04185697053760151,0,39.99
+Resort Hotel,2017,April,15,PRT,194,47.5,21,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.042179236102726114,0,39.94
+Resort Hotel,2015,December,31,BEL,0,284.0,1,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04290559673494537,0,39.82
+Resort Hotel,2017,April,24,IRL,111,89.0,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.043180560187009276,0,39.78
+City Hotel,2016,August,27,FRA,1,228.0,2,4.0,No Deposit,Direct,0,2,1,0,0,0,0,0,1,-0.04325826345561384,0,39.77
+Resort Hotel,2016,June,14,GBR,194,93.0,17,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.04328334446327592,0,39.76
+City Hotel,2016,September,29,DEU,0,225.0,4,1.0,No Deposit,Direct,0,3,1,0,0,0,0,0,1,-0.043648792425747374,0,39.7
+City Hotel,2015,July,24,PRT,0,0.0,2,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.04368954530602126,0,39.7
+Resort Hotel,2016,April,27,NLD,99,71.89,9,2.0,No Deposit,Groups,0,9,0,0,1,0,0,0,1,-0.04376095152483417,0,39.69
+Resort Hotel,2016,October,25,LTU,23,138.33,6,3.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.04377305267207293,0,39.68
+Resort Hotel,2017,July,16,PRT,103,205.03,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.04377006838337605,0,39.68
+Resort Hotel,2017,July,3,CHE,0,0.0,3,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.04386644744565549,0,39.67
+City Hotel,2015,July,25,PRT,0,0.0,1,3.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.043952985203007666,0,39.66
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2015,September,3,PRT,244,36.0,3,2.0,Non Refund,Offline TA/TO,19,0,0,1,0,0,0,0,1,-0.04407184523302682,0,39.64
+Resort Hotel,2017,March,26,IRL,74,96.2,5,4.0,No Deposit,Online TA,0,6,0,0,1,0,0,0,1,-0.04461766071139589,0,39.55
+Resort Hotel,2016,December,21,PRT,126,50.0,15,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.04475368538319985,0,39.53
+Resort Hotel,2017,August,30,ESP,357,142.22,4,2.0,No Deposit,Online TA,1,6,0,0,1,0,0,0,1,-0.04471488007376889,0,39.53
+Resort Hotel,2015,July,6,PRT,33,157.1,10,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.04478826898988297,0,39.52
+City Hotel,2015,December,30,BEL,1,205.5,4,4.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.04494364004341722,0,39.5
+City Hotel,2015,October,6,SWE,1,221.33,3,3.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.045083323416912735,0,39.48
+City Hotel,2016,March,19,PRT,0,199.0,1,3.0,No Deposit,Direct,0,2,1,0,0,0,0,0,1,-0.04538335023456602,0,39.43
+Resort Hotel,2016,September,29,CHE,19,19.0,4,2.0,No Deposit,Direct,0,7,0,0,1,0,0,0,1,-0.04548204420326213,0,39.41
+City Hotel,2015,October,6,PRT,0,0.0,1,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.045847763184618306,0,39.36
+City Hotel,2016,January,18,PRT,27,76.72,15,1.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.04639620766458141,0,39.27
+Resort Hotel,2016,August,20,IRL,130,189.86,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.04669715731998414,0,39.22
+Resort Hotel,2017,January,14,PRT,4,0.0,9,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.04691441236608945,0,39.19
+City Hotel,2017,January,18,CHE,2,201.0,5,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04686905737330266,0,39.19
+Resort Hotel,2016,September,9,PRT,0,0.0,1,3.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.04698149826323955,0,39.18
+Resort Hotel,2016,April,29,NLD,101,75.0,7,2.0,No Deposit,Groups,0,12,0,0,1,0,0,0,1,-0.04732030779423263,0,39.12
+City Hotel,2015,September,24,UKR,1,215.0,1,4.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.04744822279235822,0,39.1
+City Hotel,2016,August,17,DEU,184,82.13,1,2.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.04752359716479121,0,39.09
+Resort Hotel,2016,July,17,PRT,104,188.14,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.047862227242939315,0,39.04
+City Hotel,2015,September,26,PRT,0,200.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04798095633803884,0,39.02
+Resort Hotel,2016,July,31,DEU,2,307.0,1,4.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.048038637752998326,0,39.01
+Resort Hotel,2016,December,8,PRT,86,50.2,14,2.0,No Deposit,Direct,0,0,0,0,0,0,0,1,1,-0.04812069354316667,0,38.99
+Resort Hotel,2015,November,3,BEL,3,41.4,4,4.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,0,0,1,-0.04840122200370783,0,38.95
+Resort Hotel,2017,May,14,GBR,74,0.0,8,2.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.048492519723469296,0,38.94
+Resort Hotel,2016,March,29,PRT,46,76.0,2,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.048752516489745434,0,38.89
+Resort Hotel,2016,April,29,NLD,101,0.0,7,1.0,No Deposit,Groups,0,8,0,0,1,0,0,0,1,-0.04903284119256757,0,38.85
+City Hotel,2016,February,18,PRT,0,89.0,10,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.04929507227478541,0,38.81
+Resort Hotel,2015,July,23,PRT,9,125.0,7,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.0493983196604213,0,38.79
+Resort Hotel,2017,June,11,PRT,1,201.0,2,4.0,No Deposit,Online TA,0,1,1,0,0,0,0,0,1,-0.04958108248769588,0,38.76
+Resort Hotel,2016,July,31,IRL,0,221.5,2,1.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.049580216103043695,0,38.76
+Resort Hotel,2015,August,29,PRT,2,173.25,6,3.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.04966028852968685,0,38.75
+Resort Hotel,2015,August,11,PRT,0,211.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.04977546306900349,0,38.73
+City Hotel,2016,September,27,PRT,0,205.0,1,3.0,No Deposit,Corporate,0,2,1,0,0,0,0,0,1,-0.04990029659986084,0,38.71
+Resort Hotel,2017,July,31,ESP,1,339.4,5,3.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.05018476158808821,0,38.67
+City Hotel,2017,January,4,PRT,1,0.0,1,2.0,No Deposit,Online TA,0,1,0,0,0,0,1,0,1,-0.05044168051346609,0,38.63
+Resort Hotel,2016,September,18,GBR,242,110.8,14,2.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,0,1,1,-0.05080988382553747,0,38.57
+Resort Hotel,2017,August,31,PRT,2,245.33,3,2.0,No Deposit,Direct,0,2,1,0,0,0,0,0,1,-0.05098246113225313,0,38.54
+Resort Hotel,2015,August,5,PRT,1,247.0,3,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.051027667439468904,0,38.53
+Resort Hotel,2017,April,6,PRT,1,0.0,1,1.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.05132542189545186,0,38.49
+City Hotel,2017,July,13,PRT,2,230.0,1,4.0,No Deposit,Online TA,0,1,1,0,0,0,0,0,1,-0.051540844474031455,0,38.45
+City Hotel,2016,December,2,DEU,29,85.0,2,2.0,No Deposit,Corporate,0,6,0,0,1,0,0,0,1,-0.05204009263236825,0,38.37
+Resort Hotel,2015,December,25,ESP,45,46.0,5,4.0,No Deposit,Offline TA/TO,0,0,0,0,0,1,0,0,1,-0.05205980107539254,0,38.37
+Resort Hotel,2017,July,5,PRT,334,123.38,5,2.0,No Deposit,Direct,0,6,0,0,1,0,0,0,1,-0.052057417087588154,0,38.37
+Resort Hotel,2017,April,22,PRT,2,0.0,1,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.05214057676793449,0,38.36
+Resort Hotel,2016,December,13,GBR,147,59.08,28,2.0,No Deposit,Online TA,0,0,0,0,0,0,0,1,1,-0.05231096289861781,0,38.33
+Resort Hotel,2016,October,7,POL,45,147.5,4,2.0,No Deposit,Direct,0,6,0,0,1,0,0,0,1,-0.05228596521709872,0,38.33
+City Hotel,2016,September,20,PRT,0,210.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.052347684952784856,0,38.32
+Resort Hotel,2015,September,12,CN,254,34.0,4,1.0,No Deposit,Groups,0,5,0,0,1,0,0,0,1,-0.05259750602346014,0,38.28
+Resort Hotel,2017,July,25,BEL,235,0.0,14,2.0,No Deposit,Offline TA/TO,0,0,0,0,0,0,1,0,1,-0.053538301493293305,0,38.14
+Resort Hotel,2016,March,24,ESP,136,0.0,3,1.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.05358940123706929,0,38.13
+Resort Hotel,2016,March,24,ESP,136,0.0,3,1.0,No Deposit,Offline TA/TO,0,1,0,0,0,0,1,0,1,-0.05358940123706929,0,38.13
+Resort Hotel,2015,October,28,PRT,0,42.0,3,1.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.05384885221559599,0,38.09
+City Hotel,2015,December,10,PRT,6,0.0,2,1.0,No Deposit,Offline TA/TO,1,0,0,0,0,0,1,0,1,-0.05388329545262849,0,38.08
+City Hotel,2015,December,10,PRT,6,0.0,2,1.0,No Deposit,Offline TA/TO,1,0,0,0,0,0,1,0,1,-0.05388329545262849,0,38.08
+Resort Hotel,2016,September,9,FRA,0,216.0,1,2.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.05397441724541263,0,38.07
+City Hotel,2017,June,3,PRT,1,0.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.05404141695706938,0,38.06
+Resort Hotel,2016,December,3,ESP,87,85.5,7,2.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.05429055951277312,0,38.02
+City Hotel,2015,September,30,NOR,0,196.0,1,4.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.054664761668964446,0,37.96
+Resort Hotel,2016,June,4,PRT,36,0.0,4,2.0,No Deposit,Direct,0,2,0,0,0,0,1,0,1,-0.05479656044746972,0,37.94
+Resort Hotel,2016,December,29,PRT,9,78.8,3,2.0,No Deposit,Direct,0,5,0,0,1,0,0,0,1,-0.05479094518879685,0,37.94
+City Hotel,2016,April,16,IRL,57,177.3,3,4.0,No Deposit,Online TA,0,6,0,0,1,0,0,0,1,-0.05497436728309152,0,37.91
+Resort Hotel,2015,July,7,PRT,0,195.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.0552840216714775,0,37.86
+Resort Hotel,2016,April,29,BEL,101,75.0,5,2.0,No Deposit,Groups,0,13,0,0,1,0,0,0,1,-0.0556202074384462,0,37.8
+City Hotel,2015,October,7,PRT,0,196.0,3,4.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.05562605101725587,0,37.8
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,October,4,PRT,275,50.0,2,2.0,Non Refund,Offline TA/TO,26,0,0,1,0,0,0,0,1,-0.055748591029747274,0,37.78
+Resort Hotel,2015,September,30,FRA,272,0.0,3,1.0,No Deposit,Offline TA/TO,0,2,0,0,0,0,1,0,1,-0.0559761239095497,0,37.75
+Resort Hotel,2017,June,17,ESP,0,196.0,1,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.056652686341729375,0,37.64
+City Hotel,2016,November,23,PRT,0,0.0,1,2.0,No Deposit,Direct,0,1,0,0,0,0,1,0,1,-0.056751583085441204,0,37.63
+City Hotel,2016,January,7,PRT,0,77.5,1,1.0,No Deposit,Online TA,11,1,0,1,0,0,0,0,1,-0.056877000620409734,0,37.61
+Resort Hotel,2016,July,28,FRA,0,229.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.05689900797982328,0,37.6
+Resort Hotel,2016,April,28,NLD,100,47.0,11,2.0,No Deposit,Groups,0,6,0,0,1,0,0,0,1,-0.057188331885120625,0,37.56
+Resort Hotel,2016,April,28,NLD,100,47.0,11,2.0,No Deposit,Groups,0,6,0,0,1,0,0,0,1,-0.057188331885120625,0,37.56
+Resort Hotel,2016,August,3,PRT,1,241.0,1,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.05727256668766684,0,37.54
+Resort Hotel,2015,August,20,USA,0,200.0,1,1.0,No Deposit,Direct,0,1,1,0,0,0,0,0,1,-0.057320215563351096,0,37.54
+City Hotel,2015,October,31,PRT,0,0.0,1,4.0,No Deposit,Complementary,0,0,0,0,0,1,0,0,1,-0.057295547838817074,0,37.54
+Resort Hotel,2017,July,17,PRT,2,287.0,4,3.0,No Deposit,Direct,0,3,1,0,0,0,0,0,1,-0.05767573188863423,0,37.48
+City Hotel,2016,January,28,PRT,1,228.0,3,4.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.05770801261105968,0,37.47
+Resort Hotel,2016,April,29,NLD,101,47.0,10,2.0,No Deposit,Groups,0,6,0,0,1,0,0,0,1,-0.05779508946360734,0,37.46
+City Hotel,2017,May,4,GBR,1,260.0,1,4.0,No Deposit,Online TA,0,1,1,0,0,0,0,0,1,-0.05790572738549388,0,37.44
+Resort Hotel,2017,August,26,PRT,0,200.0,1,2.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.058137765593793356,0,37.41
+City Hotel,2016,December,6,ITA,51,109.8,3,3.0,No Deposit,Online TA,0,5,0,0,1,0,0,0,1,-0.05815029491220697,0,37.4
+City Hotel,2016,February,5,PRT,0,0.0,1,2.0,No Deposit,Direct,0,0,0,0,0,0,1,0,1,-0.058330759099349205,0,37.38
+City Hotel,2017,February,10,ESP,0,272.0,2,5.0,No Deposit,Online TA,0,0,1,0,0,0,0,0,1,-0.058273603191984935,0,37.38
+Resort Hotel,2017,August,29,ROU,293,166.6,7,2.0,No Deposit,Offline TA/TO,0,5,0,0,1,0,0,0,1,-0.05839807476186998,0,37.36
+Resort Hotel,2016,July,12,NLD,0,201.0,1,1.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.05854579698567525,0,37.34
+City Hotel,2016,December,28,PRT,8,0.0,1,2.0,No Deposit,Online TA,0,1,0,0,0,0,1,0,1,-0.05853865627535487,0,37.34
+City Hotel,2016,September,28,USA,2,0.0,1,2.0,No Deposit,Online TA,0,1,0,0,0,0,1,0,1,-0.05859292121933107,0,37.33
+City Hotel,2017,August,22,DEU,0,195.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.05876294852465891,0,37.31
+City Hotel,2017,February,23,PRT,1,207.0,1,3.0,No Deposit,Direct,0,0,1,0,0,0,0,0,1,-0.058841212488873196,0,37.29
+Resort Hotel,2015,October,21,FRA,292,0.0,2,1.0,No Deposit,Offline TA/TO,0,2,0,0,0,0,1,0,1,-0.059194805322824395,0,37.24
+City Hotel,2017,May,24,GBR,1,216.0,1,4.0,No Deposit,Online TA,0,1,1,0,0,0,0,0,1,-0.059250643153744176,0,37.23

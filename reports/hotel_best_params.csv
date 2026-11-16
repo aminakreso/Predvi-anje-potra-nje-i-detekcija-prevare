@@ -1,7 +1,0 @@
-,0
-model__colsample_bytree,0.6137554084460873
-model__learning_rate,0.22038218939289875
-model__max_depth,6.0
-model__min_child_weight,2.0
-model__n_estimators,559.0
-model__subsample,0.902144564127061
